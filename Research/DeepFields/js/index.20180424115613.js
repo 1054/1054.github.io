@@ -1,0 +1,54 @@
+(function(d){var h=[];d.loadImages=function(a,e){"string"==typeof a&&(a=[a]);for(var f=a.length,g=0,b=0;b<f;b++){var c=document.createElement("img");c.onload=function(){g++;g==f&&d.isFunction(e)&&e()};c.src=a[b];h.push(c)}}})(window.jQuery);
+$.fn.hasAttr = function(name) { var attr = $(this).attr(name); return typeof attr !== typeof undefined && attr !== false; };
+
+
+$(document).ready(function() {
+r=function(){dpi=window.devicePixelRatio;$('.js').attr('src', (dpi>1) ? 'images/hdf_extracts_showing_many_galaxies-710.jpg' : 'images/hdf_extracts_showing_many_galaxies-355.jpg');
+var a='data-src'; if($('.js-2 .slider-for .slide0').hasAttr('src')) { a='src'; } $('.js-2 .slider-for .slide0').attr(a, (dpi>1) ? 'images/screen-shot-2018-04-24-at-11.31.41-1728.png' : 'images/screen-shot-2018-04-24-at-11.31.41-864.png');
+$('.js-2 .slider-nav .slide0').attr('src', (dpi>1) ? 'images/thumb-screen-shot-2018-04-24-at-11.31.41-284.png' : 'images/thumb-screen-shot-2018-04-24-at-11.31.41-142.png');
+var a='data-src'; if($('.js-2 .slider-for .slide1').hasAttr('src')) { a='src'; } $('.js-2 .slider-for .slide1').attr(a, (dpi>1) ? 'images/screen-shot-2018-04-24-at-11.31.50-1728.png' : 'images/screen-shot-2018-04-24-at-11.31.50-864.png');
+$('.js-2 .slider-nav .slide1').attr('src', (dpi>1) ? 'images/thumb-screen-shot-2018-04-24-at-11.31.50-284.png' : 'images/thumb-screen-shot-2018-04-24-at-11.31.50-142.png');
+var a='data-src'; if($('.js-2 .slider-for .slide2').hasAttr('src')) { a='src'; } $('.js-2 .slider-for .slide2').attr(a, (dpi>1) ? 'images/screen-shot-2018-04-24-at-11.31.56-1728.png' : 'images/screen-shot-2018-04-24-at-11.31.56-864.png');
+$('.js-2 .slider-nav .slide2').attr('src', (dpi>1) ? 'images/thumb-screen-shot-2018-04-24-at-11.31.56-284.png' : 'images/thumb-screen-shot-2018-04-24-at-11.31.56-142.png');
+var a='data-src'; if($('.js-2 .slider-for .slide3').hasAttr('src')) { a='src'; } $('.js-2 .slider-for .slide3').attr(a, (dpi>1) ? 'images/screen-shot-2018-04-24-at-11.32.24-1728.png' : 'images/screen-shot-2018-04-24-at-11.32.24-864.png');
+$('.js-2 .slider-nav .slide3').attr('src', (dpi>1) ? 'images/thumb-screen-shot-2018-04-24-at-11.32.24-284.png' : 'images/thumb-screen-shot-2018-04-24-at-11.32.24-142.png');
+var a='data-src'; if($('.js-2 .slider-for .slide4').hasAttr('src')) { a='src'; } $('.js-2 .slider-for .slide4').attr(a, (dpi>1) ? 'images/screen-shot-2018-04-24-at-11.32.32-1728.png' : 'images/screen-shot-2018-04-24-at-11.32.32-864.png');
+$('.js-2 .slider-nav .slide4').attr('src', (dpi>1) ? 'images/thumb-screen-shot-2018-04-24-at-11.32.32-284.png' : 'images/thumb-screen-shot-2018-04-24-at-11.32.32-142.png');
+var a='data-src'; if($('.js-2 .slider-for .slide5').hasAttr('src')) { a='src'; } $('.js-2 .slider-for .slide5').attr(a, (dpi>1) ? 'images/screen-shot-2018-04-24-at-11.32.55-1728.png' : 'images/screen-shot-2018-04-24-at-11.32.55-864.png');
+$('.js-2 .slider-nav .slide5').attr('src', (dpi>1) ? 'images/thumb-screen-shot-2018-04-24-at-11.32.55-284.png' : 'images/thumb-screen-shot-2018-04-24-at-11.32.55-142.png');
+var a='data-src'; if($('.js-2 .slider-for .slide6').hasAttr('src')) { a='src'; } $('.js-2 .slider-for .slide6').attr(a, (dpi>1) ? 'images/screen-shot-2018-04-24-at-11.33.26-1728.png' : 'images/screen-shot-2018-04-24-at-11.33.26-864.png');
+$('.js-2 .slider-nav .slide6').attr('src', (dpi>1) ? 'images/thumb-screen-shot-2018-04-24-at-11.33.26-284.png' : 'images/thumb-screen-shot-2018-04-24-at-11.33.26-142.png');
+var a='data-src'; if($('.js-2 .slider-for .slide7').hasAttr('src')) { a='src'; } $('.js-2 .slider-for .slide7').attr(a, (dpi>1) ? 'images/screen-shot-2018-04-24-at-11.33.37-1728.png' : 'images/screen-shot-2018-04-24-at-11.33.37-864.png');
+$('.js-2 .slider-nav .slide7').attr('src', (dpi>1) ? 'images/thumb-screen-shot-2018-04-24-at-11.33.37-284.png' : 'images/thumb-screen-shot-2018-04-24-at-11.33.37-142.png');
+var a='data-src'; if($('.js-2 .slider-for .slide8').hasAttr('src')) { a='src'; } $('.js-2 .slider-for .slide8').attr(a, (dpi>1) ? 'images/screen-shot-2018-04-24-at-11.33.47-1728.png' : 'images/screen-shot-2018-04-24-at-11.33.47-864.png');
+$('.js-2 .slider-nav .slide8').attr('src', (dpi>1) ? 'images/thumb-screen-shot-2018-04-24-at-11.33.47-284.png' : 'images/thumb-screen-shot-2018-04-24-at-11.33.47-142.png');
+var a='data-src'; if($('.js-2 .slider-for .slide9').hasAttr('src')) { a='src'; } $('.js-2 .slider-for .slide9').attr(a, (dpi>1) ? 'images/screen-shot-2018-04-24-at-11.33.57-1728.png' : 'images/screen-shot-2018-04-24-at-11.33.57-864.png');
+$('.js-2 .slider-nav .slide9').attr('src', (dpi>1) ? 'images/thumb-screen-shot-2018-04-24-at-11.33.57-284.png' : 'images/thumb-screen-shot-2018-04-24-at-11.33.57-142.png');
+var a='data-src'; if($('.js-2 .slider-for .slide10').hasAttr('src')) { a='src'; } $('.js-2 .slider-for .slide10').attr(a, (dpi>1) ? 'images/screen-shot-2018-04-24-at-11.34.19-1728.png' : 'images/screen-shot-2018-04-24-at-11.34.19-864.png');
+$('.js-2 .slider-nav .slide10').attr('src', (dpi>1) ? 'images/thumb-screen-shot-2018-04-24-at-11.34.19-284.png' : 'images/thumb-screen-shot-2018-04-24-at-11.34.19-142.png');
+var a='data-src'; if($('.js-2 .slider-for .slide11').hasAttr('src')) { a='src'; } $('.js-2 .slider-for .slide11').attr(a, (dpi>1) ? 'images/screen-shot-2018-04-24-at-11.34.38-1728.png' : 'images/screen-shot-2018-04-24-at-11.34.38-864.png');
+$('.js-2 .slider-nav .slide11').attr('src', (dpi>1) ? 'images/thumb-screen-shot-2018-04-24-at-11.34.38-284.png' : 'images/thumb-screen-shot-2018-04-24-at-11.34.38-142.png');
+var a='data-src'; if($('.js-2 .slider-for .slide12').hasAttr('src')) { a='src'; } $('.js-2 .slider-for .slide12').attr(a, (dpi>1) ? 'images/screen-shot-2018-04-24-at-11.35.00-1728.png' : 'images/screen-shot-2018-04-24-at-11.35.00-864.png');
+$('.js-2 .slider-nav .slide12').attr('src', (dpi>1) ? 'images/thumb-screen-shot-2018-04-24-at-11.35.00-284.png' : 'images/thumb-screen-shot-2018-04-24-at-11.35.00-142.png');
+var a='data-src'; if($('.js-2 .slider-for .slide13').hasAttr('src')) { a='src'; } $('.js-2 .slider-for .slide13').attr(a, (dpi>1) ? 'images/screen-shot-2018-04-24-at-11.35.08-1728.png' : 'images/screen-shot-2018-04-24-at-11.35.08-864.png');
+$('.js-2 .slider-nav .slide13').attr('src', (dpi>1) ? 'images/thumb-screen-shot-2018-04-24-at-11.35.08-284.png' : 'images/thumb-screen-shot-2018-04-24-at-11.35.08-142.png');
+var a='data-src'; if($('.js-2 .slider-for .slide14').hasAttr('src')) { a='src'; } $('.js-2 .slider-for .slide14').attr(a, (dpi>1) ? 'images/screen-shot-2018-04-24-at-11.35.22-1728.png' : 'images/screen-shot-2018-04-24-at-11.35.22-864.png');
+$('.js-2 .slider-nav .slide14').attr('src', (dpi>1) ? 'images/thumb-screen-shot-2018-04-24-at-11.35.22-284.png' : 'images/thumb-screen-shot-2018-04-24-at-11.35.22-142.png');
+var a='data-src'; if($('.js-2 .slider-for .slide15').hasAttr('src')) { a='src'; } $('.js-2 .slider-for .slide15').attr(a, (dpi>1) ? 'images/screen-shot-2018-04-24-at-11.35.44-1728.png' : 'images/screen-shot-2018-04-24-at-11.35.44-864.png');
+$('.js-2 .slider-nav .slide15').attr('src', (dpi>1) ? 'images/thumb-screen-shot-2018-04-24-at-11.35.44-284.png' : 'images/thumb-screen-shot-2018-04-24-at-11.35.44-142.png');
+var a='data-src'; if($('.js-2 .slider-for .slide16').hasAttr('src')) { a='src'; } $('.js-2 .slider-for .slide16').attr(a, (dpi>1) ? 'images/screen-shot-2018-04-24-at-11.35.55-1728.png' : 'images/screen-shot-2018-04-24-at-11.35.55-864.png');
+$('.js-2 .slider-nav .slide16').attr('src', (dpi>1) ? 'images/thumb-screen-shot-2018-04-24-at-11.35.55-284.png' : 'images/thumb-screen-shot-2018-04-24-at-11.35.55-142.png');
+var a='data-src'; if($('.js-2 .slider-for .slide17').hasAttr('src')) { a='src'; } $('.js-2 .slider-for .slide17').attr(a, (dpi>1) ? 'images/screen-shot-2018-04-24-at-11.36.05-1728.png' : 'images/screen-shot-2018-04-24-at-11.36.05-864.png');
+$('.js-2 .slider-nav .slide17').attr('src', (dpi>1) ? 'images/thumb-screen-shot-2018-04-24-at-11.36.05-284.png' : 'images/thumb-screen-shot-2018-04-24-at-11.36.05-142.png');
+var a='data-src'; if($('.js-2 .slider-for .slide18').hasAttr('src')) { a='src'; } $('.js-2 .slider-for .slide18').attr(a, (dpi>1) ? 'images/screen-shot-2018-04-24-at-11.36.21-1728.png' : 'images/screen-shot-2018-04-24-at-11.36.21-864.png');
+$('.js-2 .slider-nav .slide18').attr('src', (dpi>1) ? 'images/thumb-screen-shot-2018-04-24-at-11.36.21-284.png' : 'images/thumb-screen-shot-2018-04-24-at-11.36.21-142.png');
+var a='data-src'; if($('.js-2 .slider-for .slide19').hasAttr('src')) { a='src'; } $('.js-2 .slider-for .slide19').attr(a, (dpi>1) ? 'images/screen-shot-2018-04-24-at-11.36.27-1728.png' : 'images/screen-shot-2018-04-24-at-11.36.27-864.png');
+$('.js-2 .slider-nav .slide19').attr('src', (dpi>1) ? 'images/thumb-screen-shot-2018-04-24-at-11.36.27-284.png' : 'images/thumb-screen-shot-2018-04-24-at-11.36.27-142.png');
+var a='data-src'; if($('.js-2 .slider-for .slide20').hasAttr('src')) { a='src'; } $('.js-2 .slider-for .slide20').attr(a, (dpi>1) ? 'images/screen-shot-2018-04-24-at-11.36.33-1728.png' : 'images/screen-shot-2018-04-24-at-11.36.33-864.png');
+$('.js-2 .slider-nav .slide20').attr('src', (dpi>1) ? 'images/thumb-screen-shot-2018-04-24-at-11.36.33-284.png' : 'images/thumb-screen-shot-2018-04-24-at-11.36.33-142.png');
+var a='data-src'; if($('.js-2 .slider-for .slide21').hasAttr('src')) { a='src'; } $('.js-2 .slider-for .slide21').attr(a, (dpi>1) ? 'images/screen-shot-2018-04-24-at-11.36.43-1728.png' : 'images/screen-shot-2018-04-24-at-11.36.43-864.png');
+$('.js-2 .slider-nav .slide21').attr('src', (dpi>1) ? 'images/thumb-screen-shot-2018-04-24-at-11.36.43-284.png' : 'images/thumb-screen-shot-2018-04-24-at-11.36.43-142.png');};
+if(!window.HTMLPictureElement){r();}
+(function(){$('a[href^="#"]').each(function(){$(this).click(function(){var t=this.hash.length>1?$('[name="'+this.hash.slice(1)+'"]').offset().top:0;return $("html, body").animate({scrollTop:t},400),!1})})})();
+$('.js-2 .slider-for').slick({lazyLoad: 'ondemand',slidesToShow: 1,slidesToScroll: 1,arrows: false,fade: true,infinite: true,asNavFor: '.js-2 .slider-nav',});$('.js-2 .slider-nav').slick({slidesToShow: 5,slidesToScroll: 1,asNavFor: '.js-2 .slider-for',centerMode: true,focusOnSelect: true,dots: false,arrows: true,infinite: true,autoplay: true,pauseOnHover: true,autoplaySpeed: 2500});
+});

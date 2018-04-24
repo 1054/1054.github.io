@@ -1,0 +1,259 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Radio - Radio Line Brightness Tempertature</title>
+    <link rel="stylesheet" href="/stylesheet.css">
+    <link rel="stylesheet" href="/hover.css">
+    
+    <script type="text/x-mathjax-config">
+      /*<![CDATA[*/MathJax.Hub.Config({
+      tex2jax: {
+          inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+          displayMath: [ ["$$","$$"], ["\\[","\\]"] ],
+          displayAlign: "left", 
+          processEscapes: true
+        }
+      });
+      /*!]]>*/
+    </script>
+    <!-- 
+    <script type="text/javascript" charset="utf-8" src="/jas/mathjax/MathJax.js?config=TeX-AMS_CHTML"></script>
+    -->
+    <!--"https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML"-->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+    
+    <!--
+    <script src="/jas/jquery-1.10.2.js"></script>
+    -->
+  </head>
+  <body>
+    <!-- begin of header bar -->
+    <div id="head-navigator" class="head-navigator">
+      <ul>
+        <li><a href="/">Homepage</a></li>
+        <li><a href="/Research">Research</a></li>
+        <li><a href="/Wiki">Wiki</a></li> <!-- <li><a href="https://wiki-1054.rhcloud.com">Wiki</a></li> -->
+        <li><a href="/CV">CV</a></li>
+        <li><a href="/Contact">Contact</a></li>
+      </ul>
+    </div>
+    
+    <div id="head-banner" class="head-banner-with-background">
+      <h1>Radio - Radio Line Brightness Tempertature</h1>
+      
+    </div>
+    
+    <!-- end of header bar --> 
+    
+    
+    
+    <!-- 
+    <div id="main">
+    -->
+    <div id="page" class="page">
+      
+<h3>Radio Line Brightness Tempertature Equations</h3>
+
+<p>$ L_{\mathrm{MoleLine}} = 4 \pi D_L^2 F_{\mathrm{obs}} = 4 \pi D_L^2 \ \nu_{\mathrm{obs}} \ c^{-1} ( \Sigma \Delta S_{\mathrm{obs}} v_{\mathrm{obs}} ) \quad [L_{\odot}] $</p>
+
+<p>$ L\prime_{\mathrm{MoleLine}} = \mathrm{Area} * F_{\mathrm{source}} = \Omega_{s} D_A^2 (\Sigma T_{s} \Delta v_{s}) = D_L^2 \ \nu_{\mathrm{obs}}^{-2} \ \frac{c^2}{2k_B} (1+z)^{-3} ( \Sigma \Delta S_{\mathrm{obs}} v_{\mathrm{obs}} ) \quad [K \ km/s \ pc^2] $</p>
+
+<p>where $ ( \Sigma \Delta S_{\mathrm{obs}} v_{\mathrm{obs}} ) $ is in unit of $ [Jy km/s] $.</p>
+
+<p>$ L\prime_{\mathrm{MoleLine}} = Area * F_{\mathrm{source}} = \Omega_{s} D_A^2 (\Sigma T_{s} \Delta v_{s}) = \Omega_{s*b} D_A^2 \ I_{\mathrm{obs}} \ (1+z) \quad [\mathrm{K} \ \mathrm{km}/\mathrm{s} \ \mathrm{pc}^2] $</p>
+
+<p>where $ I_{\mathrm{obs}} $ is in unit of $ [\mathrm{K} \ \mathrm{km}/\mathrm{s}] $.</p>
+
+<h4>W m-2 to solar Lumin</h4>
+
+<h4>Jy km s$^{-1}$ to solar Lumin</h4>
+
+<p>If flux $F$ is in unit $Jy \, km \, s^{-1}$, then</p>
+
+<p>$ \frac{L}{\mathrm{[erg \ s^{-1}]}} = \frac{F}{\mathrm{[Jy \, km \, s^{-1}]}} \cdot \frac{\mathrm{[km/s]}}{c} \cdot \frac{\nu_{\mathrm{obs}}}{[\mathrm{Hz}]} \cdot 4 \pi \frac{D_\mathrm{L}^2}{[\mathrm{cm}]^2} $</p>
+
+<p>$ \frac{L}{[erg\ s^{-1}]} = 3.9910769 \times 10^{30} \cdot \frac{F}{\mathrm{[Jy \, km \, s^{-1}]}} \cdot \frac{\nu_{\mathrm{obs}}}{[\mathrm{GHz}]} \cdot \frac{D_\mathrm{L}^2}{\mathrm{[Mpc]}^2} $</p>
+
+<p>$ \frac{L}{[\mathrm{L}_{\odot}]} = 1.0339577 \times 10^{-3} \cdot \frac{F}{\mathrm{[Jy \, km \, s^{-1}]}} \cdot \frac{\nu_{\mathrm{obs}}}{\mathrm{[GHz]}} \cdot \frac{D_\mathrm{L}^2}{\mathrm{[Mpc]}^2} $</p>
+
+<p>note that $\nu_{obs}$ is the observed frequency, rather than the rest frame frequency.</p>
+
+<h4>K km s$^{-1}$ to solar Lumin</h4>
+
+<p>$ \frac{L\prime_{\mathrm{mol}}}{[\mathrm{K \ km \ s^{-1} pc^2}]} = 3.25 \times 10^7 \ (\frac{D_\mathrm{L}}{[\mathrm{Mpc}]})^2 \ (\frac{\nu_{\mathrm{obs}}}{[\mathrm{GHz}]})^{-2} \ (\frac{S_{\mathrm{mol}} \Delta v}{[\mathrm{Jy \ km/s}]}) \ (1+z)^{-3} $</p>
+
+<p>$ \frac{L}{[\mathrm{L}_{\odot}]} = 1.0339577 \times 10^{-3} (\frac{D_L}{[Mpc]})^2 (\frac{\nu_{obs}}{[\mathrm{GHz}]}) \frac{S_{\mathrm{mol}} \Delta v}{\mathrm{[Jy \, km \, s^{-1}]}}$</p>
+
+<p>thus we have</p>
+
+<p>$ \frac{L}{[\mathrm{L}_{\odot}]} = \frac{L\prime_{\mathrm{mol}}}{[\mathrm{K \ km \ s^{-1} pc^2}]} \times 3.1814084 \times 10^{-11} (\frac{\nu_{\mathrm{rest}}}{[\mathrm{GHz}]})^3 $</p>
+
+<p>e.g.</p>
+
+<p>CO(1-0) $ \frac{L}{[\mathrm{L}_{\odot}]} = \frac{L\prime_{\mathrm{mol}}}{[\mathrm{K \ km \ s^{-1} pc^2}]} \times 0.000048728372 $</p>
+
+<p>CO(2-1) $ \frac{L}{[\mathrm{L}_{\odot}]} = \frac{L\prime_{\mathrm{mol}}}{[\mathrm{K \ km \ s^{-1} pc^2}]} \times 0.00038980460 $</p>
+
+<p>CO(3-2) $ \frac{L}{[\mathrm{L}_{\odot}]} = \frac{L\prime_{\mathrm{mol}}}{[\mathrm{K \ km \ s^{-1} pc^2}]} \times 0.0013154650 $</p>
+
+<p>CO(4-3) $ \frac{L}{[\mathrm{L}_{\odot}]} = \frac{L\prime_{\mathrm{mol}}}{[\mathrm{K \ km \ s^{-1} pc^2}]} \times 0.0031177223 $</p>
+
+<p>CO(5-4) $ \frac{L}{[\mathrm{L}_{\odot}]} = \frac{L\prime_{\mathrm{mol}}}{[\mathrm{K \ km \ s^{-1} pc^2}]} \times 0.0060882548 $</p>
+
+<p>CO(6-5) $ \frac{L}{[\mathrm{L}_{\odot}]} = \frac{L\prime_{\mathrm{mol}}}{[\mathrm{K \ km \ s^{-1} pc^2}]} \times 0.01051829 $</p>
+
+<p>[CII] 158${\mu}m$ $ \frac{L}{[L_{sun}]} = \frac{L\prime_{\mathrm{mol}}}{[K \ km \ s^{-1} pc^2]} \times 0.21839784 $</p>
+
+<h4>Jy km s$^{-1}$ to K km s$^{-1}$ pc$^2$</h4>
+
+<p>$ \frac{L\prime_{\mathrm{mol}}}{[\mathrm{K \ km \ s^{-1} pc^2}]} = 3.25 \times 10^7 \ (\frac{D_\mathrm{L}}{[\mathrm{Mpc}]})^2 \ (\frac{\nu_{\mathrm{obs}}}{[\mathrm{GHz}]})^{-2} \ (\frac{S_{\mathrm{mol}} \Delta v}{[\mathrm{Jy \, km \, s^{-1}}]}) \ (1+z)^{-3} $</p>
+
+<p>see Solomon \&amp; Vanden Bout 2005 ARA\&amp;A eq (3).</p>
+
+<p>or</p>
+
+<p>$ \frac{L\prime_{\mathrm{mol}}}{[\mathrm{K \ km \ s^{-1} pc^2}]} = 3.25 \times 10^7 \ (\frac{D_\mathrm{L}}{[\mathrm{Mpc}]})^2 \ (\frac{\nu_{\mathrm{rest}}}{[\mathrm{GHz}]})^{-2} \ (\frac{S_{\mathrm{mol}} \Delta v}{[\mathrm{Jy \, km \, s^{-1}}]}) \ (1+z)^{-1} $</p>
+
+<h4>K km s$^{-1}$ to K km s$^{-1}$ pc$^2$</h4>
+
+<p>$ \frac{L\prime_{\mathrm{mol}}}{[\mathrm{K \ km \ s^{-1} pc^2}]} = \mathrm{Area} \cdot (\frac{I_{\mathrm{mol}}}{[\mathrm{K \, km \, s^{-1}}]}) $</p>
+
+<p>$ = (\frac{\Omega_{s*b}}{[\mathrm{sr}]}) \ (\frac{D_\mathrm{A}}{[\mathrm{pc}]})^2 \ (\frac{I_{\mathrm{mol}}}{[\mathrm{K \, km \, s^{-1}}]}) $</p>
+
+<p>$ = (\frac{\Omega_{s*b}}{[\mathrm{arcsec}^2]}) \ (\frac{\pi\times10^{6}}{180\times3600})^2 \ (\frac{D_\mathrm{L}}{[\mathrm{Mpc}]})^2 \ (\frac{I_{\mathrm{mol}}}{[\mathrm{K \, km \, s^{-1}}]}) \ (1+z)^{-3} $</p>
+
+<p>thus</p>
+
+<p>$ \frac{L\prime_{\mathrm{mol}}}{[\mathrm{K \ km \ s^{-1} pc^2}]} = 23.50443 \ (\frac{\Omega_{s*b}}{[\mathrm{arcsec}^2]}) \ (\frac{D_\mathrm{L}}{[\mathrm{Mpc}]})^2 \ (\frac{I_{\mathrm{mol}}}{[\mathrm{K \, km \, s^{-1}}]}) \ (1+z)^{-3} $</p>
+
+<p>see Solomon \&amp; Vanden Bout 2005 ARA\&amp;A eq (2).</p>
+
+<p>and consider Gaussian shape beam, $\Omega_{s*b} = \frac{\pi}{4 \ln 2} \theta_{\mathrm{FHWM}}^2$</p>
+
+<p>thus</p>
+
+<p>$ \frac{L\prime_{\mathrm{mol}}}{[\mathrm{K \ km \ s^{-1} pc^2}]} = 26.63263542 \ (\frac{\theta_{\mathrm{FHWM}}^2}{[\mathrm{arcsec}^2]}) \ (\frac{D_\mathrm{L}}{[\mathrm{Mpc}]})^2 \ (\frac{I_{\mathrm{mol}}}{[\mathrm{K \, km \, s^{-1}}]}) \ (1+z)^{-3} $</p>
+
+<p>see Gao \&amp; Solomon 2004 ApJS eq (2).</p>
+
+<h4>K km s$^{-1}$ to Jy km s$^{-1}$</h4>
+
+<p>$ 3.25 \times 10^7 \ (\frac{\nu_{\mathrm{rest}}}{[\mathrm{GHz}]})^{-2} \ (\frac{S_{\mathrm{mol}} \Delta v}{[\mathrm{Jy \, km \, s^{-1}}]}) = 26.63263542 \ (\frac{\theta_{\mathrm{FHWM}}^2}{[\mathrm{arcsec}^2]}) \ (\frac{I_{\mathrm{mol}}}{[\mathrm{K \, km \, s^{-1}}]}) \ (1+z)^{-2} $</p>
+
+<p>$\to$ 
+$ (\frac{S_{\mathrm{mol}} \Delta v}{[\mathrm{Jy \, km \, s^{-1}}]}) = 8.195 \times 10^{-7} \ (\frac{\theta_{\mathrm{FHWM}}^2}{[\mathrm{arcsec}^2]}) \ (\frac{\nu_{\mathrm{rest}}}{[\mathrm{GHz}]})^{2} \ (\frac{I_{\mathrm{mol}}}{[\mathrm{K \, km \, s^{-1}}]}) \ (1+z)^{-2} $</p>
+
+<p>CO(2-1) 
+$\to$ 
+$ (\frac{S_{\mathrm{mol}} \Delta v}{[\mathrm{Jy \, km \, s^{-1}}]}) = 0.04355277437 \ (\frac{\theta_{\mathrm{FHWM}}^2}{[\mathrm{arcsec}^2]}) \ (\frac{I_{\mathrm{mol}}}{[\mathrm{K \, km \, s^{-1}}]}) \ (1+z)^{-2} $</p>
+
+<h3>Radio Telescope Beam Size</h3>
+
+<p>$\frac{\theta_{\mathrm{FWHM}}}{\mathrm{[rad]}} = 1.22 \times \frac{\lambda}{[\mathrm{m}]}/\frac{D}{[\mathrm{m}]}$</p>
+
+<p>$\frac{\theta_{\mathrm{FWHM}}}{\mathrm{[arcsec]}} = 75440.69258 \, / \frac{\nu_{\mathrm{obs}}}{[\mathrm{GHz}]} / \frac{D}{[\mathrm{m}]}$</p>
+
+<h3>Radiative Transfer Calculation Equations</h3>
+
+<h4>Calculating [CI]</h4>
+
+<p>$T_{\mathrm{R}} = T_{0} \left(\frac{1}{e^{T_{0}/T_{ex}}-1} - \frac{1}{e^{T_{0}/T_{bg}}-1} \right) (1-e^{-\tau})$, where $T_{0} \equiv h \nu / k$.</p>
+
+<p>Applying $\tau \gg 1$, $T_{bg} = 2.73 \ \mathrm{K}$, $T_{0,\mathrm{CO(1-0)}} = 5.5 \ \mathrm{K}$, we have:</p>
+
+<p>$T_{R,\mathrm{CO(1-0)},max} = 5.5/{(e^{5.5/T_{ex}}-1)} - 0.846$</p>
+
+<p>So:</p>
+
+<p>$T_{ex} = 5.5 \, / \left( {\ln [ 1 + 5.5/(T_{R,\mathrm{CO(1-0)},max} + 0.846) ]} \right)$</p>
+
+<p>Then we can calculate the optical depth $\tau$ for [CI] with:</p>
+
+<p>$T_{R,\mathrm{[CI](1-0)}} = T_{0,\mathrm{[CI](1-0)}} \left( \frac{1}{e^{T_{0,\mathrm{[CI](1-0)}}/T_{ex}}-1} - \frac{1}{e^{T_{0,\mathrm{[CI](1-0)}}/T_{bg}}-1} \right) (1 - e^{-\tau})$</p>
+
+<p>Applying $T_{bg} = 2.73 \ \mathrm{K}$, $T_{0,\mathrm{[CI](1-0)}} = 24 \ \mathrm{K}$, we have:</p>
+
+<p>$(1 - e^{-\tau}) = \frac{T_{R,\mathrm{[CI](1-0)}}}{T_{0,\mathrm{[CI](1-0)}}} \left( \frac{1}{e^{24/T_{ex}}-1} - \frac{1}{e^{24/2.73}-1} \right)^{-1} $</p>
+
+<h5>References</h5>
+<ul>
+  <li>Dickman1978 (1978ApJS…37..407D)</li>
+  <li>Pineda2008 (2008ApJ…679..481P)</li>
+  <li>Glover2015</li>
+</ul>
+
+
+    </div>
+    
+    
+    
+    <!-- begin highlight selected column -->
+    <!-- 
+    <script type="text/javascript">
+      //var mytab; var mycol;
+      function selectTabColumn() {
+        //alert(mytab.rows);
+        var mytab = $(this).parent().parent();
+        var myrow = $(this).parent().index();
+        var mycol = $(this).index();
+        alert(mytab+"\n"+myrow+"\n"+mycol);
+        for (var i = 0; i < mytab.rows.length; i++) {
+          alert(mytab.rows[i].cells.length);
+          alert(mycol);
+          var myclassname = mytab.rows[i].cells[mycol].className;
+          alert(myclassname);
+          className.replace("selected", "");
+          className += "selected";
+          mytab.rows[i].cells[mycol].className = myclassname;
+          //mytab.rows[i].cells[mycol].find('td').toggleClass("highlighted");
+          //mytab.rows[i].cells[mycol].find('td').toggleClass('selected');
+          //mytabcells.eq(i).addClass("selected");
+          //var mycells = mytab.find("tr").eq(i).find("td");
+          //for (var j = 0; j < mycells.length; j++) {
+          //  //mytab.rows.eq(i).cells.eq(j).addClass("selected");
+          //  mycells.eq(j).addClass("selected");
+          //}
+        }
+      }
+      // set onclick action for all table column header cells
+      var mypage = document.getElementById("page");
+      if (mypage != null) {
+        // alert(mypage);
+        var mytabs = mypage.getElementsByTagName("table");
+          if (mytabs != null) {
+            for (var i = 0; i < mytabs.length; i++) {
+              var mytabheads = mytabs[i].getElementsByTagName("th");
+              if (mytabheads != null) {
+                for (var j = 0; j < mytabheads.length; j++) {
+                  // alert(mytabheads[j].innerHTML);
+                  // mytabheads[j].addEventListener("click", function() {selectTabColumn();}, false);
+                  mytabheads[j].addEventListener("click", function() {
+                    // onclick function - select all cells
+                    var myrow = $(this).parent().index()+1;
+                    var mycol = $(this).index()+1;
+                    var mycols = $(this).closest("table").find('td:nth-child('+mycol+')');
+                    mycols.addClass("selected");
+                    var selection = window.getSelection();
+                    selection.removeAllRanges();
+                    for (var k = 0; k < mycols.length; k++) {
+                      var range = document.createRange();
+                      range.selectNode(mycols[k]); // https://stackoverflow.com/questions/20575927/javascript-highlight-html-table-cell-onclick-and-copy-value-with-ctrl-c
+                      selection.addRange(range);
+                    }
+                    //alert("Row: "+myrow+"\n"+"Col: "+mycol+"\n"+"Sel: "+mycols.length);
+                    // OR
+                    // onclick function - manually highlight all cells then copy to clipboard
+                  }, false);
+                }
+              }
+            }
+          }
+      }
+    </script>
+    -->
+    <!-- end highlight selected column -->
+    
+    
+  </body>
+</html>

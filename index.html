@@ -1,0 +1,162 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>No Title</title>
+    <link rel="stylesheet" href="/stylesheet.css">
+    <link rel="stylesheet" href="/hover.css">
+    
+    <script type="text/x-mathjax-config">
+      /*<![CDATA[*/MathJax.Hub.Config({
+      tex2jax: {
+          inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+          displayMath: [ ["$$","$$"], ["\\[","\\]"] ],
+          displayAlign: "left", 
+          processEscapes: true
+        }
+      });
+      /*!]]>*/
+    </script>
+    <!-- 
+    <script type="text/javascript" charset="utf-8" src="/jas/mathjax/MathJax.js?config=TeX-AMS_CHTML"></script>
+    -->
+    <!--"https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML"-->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+    
+    <!--
+    <script src="/jas/jquery-1.10.2.js"></script>
+    -->
+  </head>
+  <body>
+    <!-- begin of header bar -->
+    <div id="head-navigator" class="head-navigator">
+      <ul>
+        <li><a href="/">Homepage</a></li>
+        <li><a href="/Research">Research</a></li>
+        <li><a href="/Wiki">Wiki</a></li> <!-- <li><a href="https://wiki-1054.rhcloud.com">Wiki</a></li> -->
+        <li><a href="/CV">CV</a></li>
+        <li><a href="/Contact">Contact</a></li>
+      </ul>
+    </div>
+    
+    <div id="head-banner" class="head-banner-with-background">
+      <h1>No Title</h1>
+      <p></p>
+    </div>
+    
+    <!-- end of header bar --> 
+    
+    
+    
+    <!-- 
+    <div id="main">
+    -->
+    <div id="page" class="page">
+      	
+	<!-- page -->
+	
+	<!--
+    <div id="head-banner-image" class="head-banner-image">
+    </div>
+    -->
+    
+	<div id="sidebar" class="sidebar">
+		<div class="title">
+			<h2>Information</h2>
+		</div>
+		<ul class="style2">
+			<li>
+				<ul class="style3">
+				<div>Email:</div>
+				<li>No Email</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+    
+	<div id="div-01" class="div-align-left">
+		<h2>No Name</h2>
+		<span class="byline">No Where</span> 
+	</div>
+	
+	<div id="div-02" class="div-align-left">
+	    <p>
+	    <cite>The true sign of intelligence is not knowledge but imagination.</cite>
+	    <br />
+	    $-$ A. Einstein
+	    </p>
+	</div>
+
+    </div>
+    
+    
+    
+    <!-- begin highlight selected column -->
+    <!-- 
+    <script type="text/javascript">
+      //var mytab; var mycol;
+      function selectTabColumn() {
+        //alert(mytab.rows);
+        var mytab = $(this).parent().parent();
+        var myrow = $(this).parent().index();
+        var mycol = $(this).index();
+        alert(mytab+"\n"+myrow+"\n"+mycol);
+        for (var i = 0; i < mytab.rows.length; i++) {
+          alert(mytab.rows[i].cells.length);
+          alert(mycol);
+          var myclassname = mytab.rows[i].cells[mycol].className;
+          alert(myclassname);
+          className.replace("selected", "");
+          className += "selected";
+          mytab.rows[i].cells[mycol].className = myclassname;
+          //mytab.rows[i].cells[mycol].find('td').toggleClass("highlighted");
+          //mytab.rows[i].cells[mycol].find('td').toggleClass('selected');
+          //mytabcells.eq(i).addClass("selected");
+          //var mycells = mytab.find("tr").eq(i).find("td");
+          //for (var j = 0; j < mycells.length; j++) {
+          //  //mytab.rows.eq(i).cells.eq(j).addClass("selected");
+          //  mycells.eq(j).addClass("selected");
+          //}
+        }
+      }
+      // set onclick action for all table column header cells
+      var mypage = document.getElementById("page");
+      if (mypage != null) {
+        // alert(mypage);
+        var mytabs = mypage.getElementsByTagName("table");
+          if (mytabs != null) {
+            for (var i = 0; i < mytabs.length; i++) {
+              var mytabheads = mytabs[i].getElementsByTagName("th");
+              if (mytabheads != null) {
+                for (var j = 0; j < mytabheads.length; j++) {
+                  // alert(mytabheads[j].innerHTML);
+                  // mytabheads[j].addEventListener("click", function() {selectTabColumn();}, false);
+                  mytabheads[j].addEventListener("click", function() {
+                    // onclick function - select all cells
+                    var myrow = $(this).parent().index()+1;
+                    var mycol = $(this).index()+1;
+                    var mycols = $(this).closest("table").find('td:nth-child('+mycol+')');
+                    mycols.addClass("selected");
+                    var selection = window.getSelection();
+                    selection.removeAllRanges();
+                    for (var k = 0; k < mycols.length; k++) {
+                      var range = document.createRange();
+                      range.selectNode(mycols[k]); // https://stackoverflow.com/questions/20575927/javascript-highlight-html-table-cell-onclick-and-copy-value-with-ctrl-c
+                      selection.addRange(range);
+                    }
+                    //alert("Row: "+myrow+"\n"+"Col: "+mycol+"\n"+"Sel: "+mycols.length);
+                    // OR
+                    // onclick function - manually highlight all cells then copy to clipboard
+                  }, false);
+                }
+              }
+            }
+          }
+      }
+    </script>
+    -->
+    <!-- end highlight selected column -->
+    
+    
+  </body>
+</html>

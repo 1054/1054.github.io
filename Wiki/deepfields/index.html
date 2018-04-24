@@ -1,0 +1,382 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>DeepFields</title>
+    <link rel="stylesheet" href="/stylesheet.css">
+    <link rel="stylesheet" href="/hover.css">
+    
+    <script type="text/x-mathjax-config">
+      /*<![CDATA[*/MathJax.Hub.Config({
+      tex2jax: {
+          inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+          displayMath: [ ["$$","$$"], ["\\[","\\]"] ],
+          displayAlign: "left", 
+          processEscapes: true
+        }
+      });
+      /*!]]>*/
+    </script>
+    <!-- 
+    <script type="text/javascript" charset="utf-8" src="/jas/mathjax/MathJax.js?config=TeX-AMS_CHTML"></script>
+    -->
+    <!--"https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML"-->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+    
+    <!--
+    <script src="/jas/jquery-1.10.2.js"></script>
+    -->
+  </head>
+  <body>
+    <!-- begin of header bar -->
+    <div id="head-navigator" class="head-navigator">
+      <ul>
+        <li><a href="/">Homepage</a></li>
+        <li><a href="/Research">Research</a></li>
+        <li><a href="/Wiki">Wiki</a></li> <!-- <li><a href="https://wiki-1054.rhcloud.com">Wiki</a></li> -->
+        <li><a href="/CV">CV</a></li>
+        <li><a href="/Contact">Contact</a></li>
+      </ul>
+    </div>
+    
+    <div id="head-banner" class="head-banner-with-background">
+      <h1>DeepFields</h1>
+      
+    </div>
+    
+    <!-- end of header bar --> 
+    
+    
+    
+    <!-- 
+    <div id="main">
+    -->
+    <div id="page" class="page">
+      
+<div class="div-for-table">
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: center">Name</th>
+        <th style="text-align: center">Position</th>
+        <th style="text-align: center">Area</th>
+        <th style="text-align: center">Band</th>
+        <th style="text-align: center">Detection</th>
+        <th style="text-align: center">Description</th>
+        <th style="text-align: center">Reference</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: center">HDF-N</td>
+        <td style="text-align: center">12:36:49.40 +62:12:58.0 J2000</td>
+        <td style="text-align: center">??x??A112</td>
+        <td style="text-align: center"> </td>
+        <td style="text-align: center"> </td>
+        <td style="text-align: center"> </td>
+        <td style="text-align: center"><a href="http://www.stsci.edu/ftp/science/hdf/clearinghouse/clearinghouse.html">URL</a></td>
+      </tr>
+      <tr>
+        <td style="text-align: center"> </td>
+        <td style="text-align: center"> </td>
+        <td style="text-align: center">0.2 sq. degree</td>
+        <td style="text-align: center">KPNO_4m</td>
+        <td style="text-align: center">48858</td>
+        <td style="text-align: center">5σ in $R$ or $z’$</td>
+        <td style="text-align: center"><a href="http://adsabs.harvard.edu/abs/2004AJ....127..180C">Capak2004</a></td>
+      </tr>
+      <tr>
+        <td style="text-align: center">HDF-S</td>
+        <td style="text-align: center">22:32:56.22 -60:33:02.7 J2000</td>
+        <td style="text-align: center"> </td>
+        <td style="text-align: center">HST,CTIO,VLT,Spitzer,Herschel,AustrT,Chandra</td>
+        <td style="text-align: center"> </td>
+        <td style="text-align: center"> </td>
+        <td style="text-align: center"><a href="http://www.stsci.edu/ftp/science/hdfsouth/clearinghouse.html">URL</a></td>
+      </tr>
+      <tr>
+        <td style="text-align: center">HUDF</td>
+        <td style="text-align: center">03:32:39.00 -27:47:29.1 J2000</td>
+        <td style="text-align: center">50”x55”A???</td>
+        <td style="text-align: center">HST</td>
+        <td style="text-align: center"> </td>
+        <td style="text-align: center"> </td>
+        <td style="text-align: center"> </td>
+      </tr>
+      <tr>
+        <td style="text-align: center">HXDF</td>
+        <td style="text-align: center"> </td>
+        <td style="text-align: center"> </td>
+        <td style="text-align: center">HST</td>
+        <td style="text-align: center"> </td>
+        <td style="text-align: center"> </td>
+        <td style="text-align: center"><a href="http://www.stsci.edu/hst/udf">URL</a></td>
+      </tr>
+      <tr>
+        <td style="text-align: center">CDF-N</td>
+        <td style="text-align: center"> </td>
+        <td style="text-align: center"> </td>
+        <td style="text-align: center">Chandra</td>
+        <td style="text-align: center"> </td>
+        <td style="text-align: center"> </td>
+        <td style="text-align: center"><a href="https://ned.ipac.caltech.edu/level5/March07/Reshetnikov/Reshetnikov4.html">URL</a></td>
+      </tr>
+      <tr>
+        <td style="text-align: center"> </td>
+        <td style="text-align: center"> </td>
+        <td style="text-align: center"> </td>
+        <td style="text-align: center">Chandra 2Ms</td>
+        <td style="text-align: center">683</td>
+        <td style="text-align: center"> </td>
+        <td style="text-align: center"><a href="http://adsabs.harvard.edu/abs/2016ApJS..224...15X">Xue2016</a></td>
+      </tr>
+      <tr>
+        <td style="text-align: center">CDF-S</td>
+        <td style="text-align: center"> </td>
+        <td style="text-align: center"> </td>
+        <td style="text-align: center">Chandra</td>
+        <td style="text-align: center"> </td>
+        <td style="text-align: center"> </td>
+        <td style="text-align: center"><a href="https://ned.ipac.caltech.edu/level5/March07/Reshetnikov/Reshetnikov4.html">URL</a></td>
+      </tr>
+      <tr>
+        <td style="text-align: center">ECDFS</td>
+        <td style="text-align: center"> </td>
+        <td style="text-align: center"> </td>
+        <td style="text-align: center">Chandra</td>
+        <td style="text-align: center"> </td>
+        <td style="text-align: center"> </td>
+        <td style="text-align: center"><a href="http://www2.astro.psu.edu/users/niel/ecdfs/ecdfs-chandra.html">URL</a></td>
+      </tr>
+      <tr>
+        <td style="text-align: center">GOODS-N</td>
+        <td style="text-align: center">12:36:55.?? +62:14:15.? J2000</td>
+        <td style="text-align: center">10’x16’</td>
+        <td style="text-align: center"> </td>
+        <td style="text-align: center"> </td>
+        <td style="text-align: center"> </td>
+        <td style="text-align: center"><a href="http://www.stsci.edu/science/goods/">URL</a> <a href="http://home.strw.leidenuniv.nl/~jarle/Surveys/DeepFields/GOODS-N-All.html">URL</a> <a href="http://simbad.u-strasbg.fr/simbad/sim-id?Ident=GOODS+North+Field">SIMBAD</a></td>
+      </tr>
+      <tr>
+        <td style="text-align: center">GOODS-S</td>
+        <td style="text-align: center">03:32:28.?? -27:48:30.? J2000</td>
+        <td style="text-align: center"> </td>
+        <td style="text-align: center"> </td>
+        <td style="text-align: center"> </td>
+        <td style="text-align: center"> </td>
+        <td style="text-align: center"> </td>
+      </tr>
+      <tr>
+        <td style="text-align: center">COSMOS</td>
+        <td style="text-align: center">10:00:28.60 +02:12:21.0 J2000</td>
+        <td style="text-align: center"> </td>
+        <td style="text-align: center">GALEX,HST,Subaru,CFHT,VISTA,Spitzer,Herschel,Chandra</td>
+        <td style="text-align: center"> </td>
+        <td style="text-align: center"> </td>
+        <td style="text-align: center"><a href="http://cosmos.astro.caltech.edu/">URL</a></td>
+      </tr>
+      <tr>
+        <td style="text-align: center">UDS</td>
+        <td style="text-align: center"> </td>
+        <td style="text-align: center"> </td>
+        <td style="text-align: center"> </td>
+        <td style="text-align: center"> </td>
+        <td style="text-align: center"> </td>
+        <td style="text-align: center"> </td>
+      </tr>
+      <tr>
+        <td style="text-align: center">EGS</td>
+        <td style="text-align: center">14:17       +52:30      J2000</td>
+        <td style="text-align: center">10’x70’, 0.197 sq. degree</td>
+        <td style="text-align: center"> </td>
+        <td style="text-align: center"> </td>
+        <td style="text-align: center"> </td>
+        <td style="text-align: center"><a href="http://aegis.ucolick.org/">URL</a></td>
+      </tr>
+      <tr>
+        <td style="text-align: center">Lockman-N</td>
+        <td style="text-align: center"> </td>
+        <td style="text-align: center"> </td>
+        <td style="text-align: center"> </td>
+        <td style="text-align: center"> </td>
+        <td style="text-align: center"> </td>
+        <td style="text-align: center"> </td>
+      </tr>
+      <tr>
+        <td style="text-align: center">Lockman-S</td>
+        <td style="text-align: center"> </td>
+        <td style="text-align: center"> </td>
+        <td style="text-align: center"> </td>
+        <td style="text-align: center"> </td>
+        <td style="text-align: center"> </td>
+        <td style="text-align: center"> </td>
+      </tr>
+      <tr>
+        <td style="text-align: center">FLS</td>
+        <td style="text-align: center"> </td>
+        <td style="text-align: center"> </td>
+        <td style="text-align: center"> </td>
+        <td style="text-align: center"> </td>
+        <td style="text-align: center"> </td>
+        <td style="text-align: center"> </td>
+      </tr>
+      <tr>
+        <td style="text-align: center">SDF</td>
+        <td style="text-align: center"> </td>
+        <td style="text-align: center"> </td>
+        <td style="text-align: center">Subaru</td>
+        <td style="text-align: center"> </td>
+        <td style="text-align: center"> </td>
+        <td style="text-align: center"> </td>
+      </tr>
+      <tr>
+        <td style="text-align: center">SXDS</td>
+        <td style="text-align: center">02:18:??.?? -05:00:??.? J2000</td>
+        <td style="text-align: center">1.3’</td>
+        <td style="text-align: center">GALEX,Subaru,UKIRT,JCMT,VLA,XMM-Newton,</td>
+        <td style="text-align: center"> </td>
+        <td style="text-align: center"> </td>
+        <td style="text-align: center"> </td>
+      </tr>
+      <tr>
+        <td style="text-align: center">Boötes</td>
+        <td style="text-align: center">14:32:05.71 +34:16:47.5 J2000</td>
+        <td style="text-align: center">3x3 degree</td>
+        <td style="text-align: center">KPNO,CTIO,Chandra,VLA</td>
+        <td style="text-align: center"> </td>
+        <td style="text-align: center"> </td>
+        <td style="text-align: center"><a href="http://www.noao.edu/noao/noaodeep/">URL</a></td>
+      </tr>
+      <tr>
+        <td style="text-align: center">Cetus</td>
+        <td style="text-align: center">02:10:00.00 -04:30:00.0 J2000</td>
+        <td style="text-align: center">2.3x4.0 degree</td>
+        <td style="text-align: center">KPNO,CTIO,Chandra,VLA</td>
+        <td style="text-align: center"> </td>
+        <td style="text-align: center"> </td>
+        <td style="text-align: center"><a href="http://www.noao.edu/noao/noaodeep/">URL</a></td>
+      </tr>
+      <tr>
+        <td style="text-align: center">WHDF</td>
+        <td style="text-align: center">00:22:33    +00:21      J2000</td>
+        <td style="text-align: center"> </td>
+        <td style="text-align: center">WHT_4.2m</td>
+        <td style="text-align: center"> </td>
+        <td style="text-align: center"> </td>
+        <td style="text-align: center"><a href="https://ned.ipac.caltech.edu/level5/March07/Reshetnikov/Reshetnikov4.html">URL</a></td>
+      </tr>
+      <tr>
+        <td style="text-align: center">FDF</td>
+        <td style="text-align: center"> </td>
+        <td style="text-align: center"> </td>
+        <td style="text-align: center">ESO_NTT</td>
+        <td style="text-align: center"> </td>
+        <td style="text-align: center"> </td>
+        <td style="text-align: center"> </td>
+      </tr>
+      <tr>
+        <td style="text-align: center">SEDS</td>
+        <td style="text-align: center"> </td>
+        <td style="text-align: center"> </td>
+        <td style="text-align: center"> </td>
+        <td style="text-align: center"> </td>
+        <td style="text-align: center"> </td>
+        <td style="text-align: center"><a href="https://www.cfa.harvard.edu/SEDS/">URL</a></td>
+      </tr>
+      <tr>
+        <td style="text-align: center">SWIRE</td>
+        <td style="text-align: center"> </td>
+        <td style="text-align: center">50’?</td>
+        <td style="text-align: center">Spitzer</td>
+        <td style="text-align: center"> </td>
+        <td style="text-align: center"> </td>
+        <td style="text-align: center"><a href="http://swire.ipac.caltech.edu/swire/science.html">URL</a></td>
+      </tr>
+      <tr>
+        <td style="text-align: center">SDWFS</td>
+        <td style="text-align: center"> </td>
+        <td style="text-align: center">10’?</td>
+        <td style="text-align: center">Spitzer</td>
+        <td style="text-align: center"> </td>
+        <td style="text-align: center"> </td>
+        <td style="text-align: center"><a href="http://irsa.ipac.caltech.edu/data/SPITZER/SDWFS/">URL</a></td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+
+    </div>
+    
+    
+    
+    <!-- begin highlight selected column -->
+    <!-- 
+    <script type="text/javascript">
+      //var mytab; var mycol;
+      function selectTabColumn() {
+        //alert(mytab.rows);
+        var mytab = $(this).parent().parent();
+        var myrow = $(this).parent().index();
+        var mycol = $(this).index();
+        alert(mytab+"\n"+myrow+"\n"+mycol);
+        for (var i = 0; i < mytab.rows.length; i++) {
+          alert(mytab.rows[i].cells.length);
+          alert(mycol);
+          var myclassname = mytab.rows[i].cells[mycol].className;
+          alert(myclassname);
+          className.replace("selected", "");
+          className += "selected";
+          mytab.rows[i].cells[mycol].className = myclassname;
+          //mytab.rows[i].cells[mycol].find('td').toggleClass("highlighted");
+          //mytab.rows[i].cells[mycol].find('td').toggleClass('selected');
+          //mytabcells.eq(i).addClass("selected");
+          //var mycells = mytab.find("tr").eq(i).find("td");
+          //for (var j = 0; j < mycells.length; j++) {
+          //  //mytab.rows.eq(i).cells.eq(j).addClass("selected");
+          //  mycells.eq(j).addClass("selected");
+          //}
+        }
+      }
+      // set onclick action for all table column header cells
+      var mypage = document.getElementById("page");
+      if (mypage != null) {
+        // alert(mypage);
+        var mytabs = mypage.getElementsByTagName("table");
+          if (mytabs != null) {
+            for (var i = 0; i < mytabs.length; i++) {
+              var mytabheads = mytabs[i].getElementsByTagName("th");
+              if (mytabheads != null) {
+                for (var j = 0; j < mytabheads.length; j++) {
+                  // alert(mytabheads[j].innerHTML);
+                  // mytabheads[j].addEventListener("click", function() {selectTabColumn();}, false);
+                  mytabheads[j].addEventListener("click", function() {
+                    // onclick function - select all cells
+                    var myrow = $(this).parent().index()+1;
+                    var mycol = $(this).index()+1;
+                    var mycols = $(this).closest("table").find('td:nth-child('+mycol+')');
+                    mycols.addClass("selected");
+                    var selection = window.getSelection();
+                    selection.removeAllRanges();
+                    for (var k = 0; k < mycols.length; k++) {
+                      var range = document.createRange();
+                      range.selectNode(mycols[k]); // https://stackoverflow.com/questions/20575927/javascript-highlight-html-table-cell-onclick-and-copy-value-with-ctrl-c
+                      selection.addRange(range);
+                    }
+                    //alert("Row: "+myrow+"\n"+"Col: "+mycol+"\n"+"Sel: "+mycols.length);
+                    // OR
+                    // onclick function - manually highlight all cells then copy to clipboard
+                  }, false);
+                }
+              }
+            }
+          }
+      }
+    </script>
+    -->
+    <!-- end highlight selected column -->
+    
+    
+  </body>
+</html>

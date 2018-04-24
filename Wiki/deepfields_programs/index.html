@@ -1,0 +1,397 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>DeepFields -- Programs</title>
+    <link rel="stylesheet" href="/stylesheet.css">
+    <link rel="stylesheet" href="/hover.css">
+    
+    <script type="text/x-mathjax-config">
+      /*<![CDATA[*/MathJax.Hub.Config({
+      tex2jax: {
+          inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+          displayMath: [ ["$$","$$"], ["\\[","\\]"] ],
+          displayAlign: "left", 
+          processEscapes: true
+        }
+      });
+      /*!]]>*/
+    </script>
+    <!-- 
+    <script type="text/javascript" charset="utf-8" src="/jas/mathjax/MathJax.js?config=TeX-AMS_CHTML"></script>
+    -->
+    <!--"https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML"-->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+    
+    <!--
+    <script src="/jas/jquery-1.10.2.js"></script>
+    -->
+  </head>
+  <body>
+    <!-- begin of header bar -->
+    <div id="head-navigator" class="head-navigator">
+      <ul>
+        <li><a href="/">Homepage</a></li>
+        <li><a href="/Research">Research</a></li>
+        <li><a href="/Wiki">Wiki</a></li> <!-- <li><a href="https://wiki-1054.rhcloud.com">Wiki</a></li> -->
+        <li><a href="/CV">CV</a></li>
+        <li><a href="/Contact">Contact</a></li>
+      </ul>
+    </div>
+    
+    <div id="head-banner" class="head-banner-with-background">
+      <h1>DeepFields -- Programs</h1>
+      
+    </div>
+    
+    <!-- end of header bar --> 
+    
+    
+    
+    <!-- 
+    <div id="main">
+    -->
+    <div id="page" class="page">
+      
+<p>Abbrev.</p>
+
+<ul>
+  <li>NF = Galaxy Number Function/Counts a given wavelength</li>
+  <li>LF = Galaxy Luminosity Function at a given wavelength</li>
+  <li>IRLF = Galaxy Total Infrared Luminosity Function</li>
+  <li>SMF = Galaxy Stellar Mass Function</li>
+  <li>CSFRD = Cosmic Star Formation Rate Density</li>
+  <li>CIB = Cosmic Infrared Background</li>
+</ul>
+
+<div class="div-for-table">
+
+  <h4>GOODS-Spitzer</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: center">Research</th>
+        <th style="text-align: center">Sample</th>
+        <th style="text-align: center">Description</th>
+        <th style="text-align: center">Reference</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: center">Survey Description</td>
+        <td style="text-align: center"> </td>
+        <td style="text-align: center"><a href="http://www.stsci.edu/science/goods/">Home Page</a></td>
+        <td style="text-align: center">Dickinson et al.</td>
+      </tr>
+      <tr>
+        <td style="text-align: center">Near-IR Catalog</td>
+        <td style="text-align: center">GOODS-N, GOODS-S</td>
+        <td style="text-align: center">Spitzer IRAC</td>
+        <td style="text-align: center">Dickinson et al.</td>
+      </tr>
+      <tr>
+        <td style="text-align: center">24μm Catalog</td>
+        <td style="text-align: center">GOODS-N, GOODS-S</td>
+        <td style="text-align: center">Spitzer MIPS</td>
+        <td style="text-align: center"><a href="http://adsabs.harvard.edu/abs/2011A%26A...528A..35M">Magnelli et al. 2011</a></td>
+      </tr>
+      <tr>
+        <td style="text-align: center">LF, IRLF, CSFRD</td>
+        <td style="text-align: center">$0&lt;z&lt;1.3$, GOODS-N, GOODS-S, EGS, ECDFS</td>
+        <td style="text-align: center">rest-frame 15μm and 35μm</td>
+        <td style="text-align: center"><a href="http://adsabs.harvard.edu/abs/2009A%26A...496...57M">Magnelli et al. 2009</a></td>
+      </tr>
+      <tr>
+        <td style="text-align: center">LF, IRLF, CSFRD</td>
+        <td style="text-align: center">$0&lt;z&lt;2.3$, GOODS-N, GOODS-S</td>
+        <td style="text-align: center">rest-frame 8μm, 15μm, 25μm and 35μm</td>
+        <td style="text-align: center"><a href="http://adsabs.harvard.edu/abs/2011A%26A...528A..35M">Magnelli et al. 2011</a></td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+
+<div class="div-for-table">
+
+  <h4>GOODS-Herschel</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: center">Research</th>
+        <th style="text-align: center">Sample</th>
+        <th style="text-align: center">Description</th>
+        <th style="text-align: center">Reference</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: center">Survey Description</td>
+        <td style="text-align: center">GOODS-N, GOODS-S</td>
+        <td style="text-align: center"><a href="http://hedam.lam.fr/GOODS-Herschel/">Home Page</a></td>
+        <td style="text-align: center"><a href="http://cdsads.u-strasbg.fr/abs/2011A%26A...533A.119E">Elbaz et al. 2011</a></td>
+      </tr>
+      <tr>
+        <td style="text-align: center">Near-IR, 24μm to 500μm Catalog</td>
+        <td style="text-align: center">GOODS-N, GOODS-S</td>
+        <td style="text-align: center">Spitzer and Herschel</td>
+        <td style="text-align: center"><a href="http://adsabs.harvard.edu/abs/2013yCat..35330119E">Elbaz et al. 2013</a></td>
+      </tr>
+      <tr>
+        <td style="text-align: center">LF, IRLF, CSFRD</td>
+        <td style="text-align: center">GOODS-N, GOODS-S, COSMOS?</td>
+        <td style="text-align: center">TODO</td>
+        <td style="text-align: center"><a href="">Schreiber et al. 2015</a></td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+
+<div class="div-for-table">
+
+  <h4>Herschel PACS Evolutionary Probe (PEP)</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: center">Research</th>
+        <th style="text-align: center">Sample</th>
+        <th style="text-align: center">Description</th>
+        <th style="text-align: center">Reference</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: center">Survey Description</td>
+        <td style="text-align: center"> </td>
+        <td style="text-align: center"><a href="http://www.mpe.mpg.de/ir/Research/PEP/index">Home Page</a></td>
+        <td style="text-align: center"><a href="http://adsabs.harvard.edu/abs/2011A%26A...532A..90L">Lutz et al. 2011</a></td>
+      </tr>
+      <tr>
+        <td style="text-align: center">NF, CIB</td>
+        <td style="text-align: center">GOODS-N, LH, COSMOS</td>
+        <td style="text-align: center">obs-frame 100μm and 160μm</td>
+        <td style="text-align: center"><a href="http://adsabs.harvard.edu/abs/2010A%26A...518L..30B">Berta et al. 2010</a></td>
+      </tr>
+      <tr>
+        <td style="text-align: center">NF, CIB</td>
+        <td style="text-align: center">GOODS-N, GOODS-S, LH, COSMOS</td>
+        <td style="text-align: center">obs-frame 70μm, 100μm and 160μm</td>
+        <td style="text-align: center"><a href="http://adsabs.harvard.edu/abs/2011A%26A...532A..49B">Berta et al. 2011</a></td>
+      </tr>
+      <tr>
+        <td style="text-align: center">LF, IRLF, CSFRD</td>
+        <td style="text-align: center">$0&lt;z&lt;3$, GOODS-N</td>
+        <td style="text-align: center">SED fitting (Le PHARE)</td>
+        <td style="text-align: center"><a href="http://adsabs.harvard.edu/abs/2010A%26A...518L..27G">Gruppioni et al. 2010</a></td>
+      </tr>
+      <tr>
+        <td style="text-align: center">LF, IRLF, CSFRD</td>
+        <td style="text-align: center">$0&lt;z&lt;4$, PACS-selected, GOODS-N, GOODS-S/ECDFS, COSMOS</td>
+        <td style="text-align: center">SED fitting (Le PHARE) obs-frame 70-500μm (PEP+HerMES)</td>
+        <td style="text-align: center"><a href="http://adsabs.harvard.edu/abs/2013MNRAS.432...23G">Gruppioni et al. 2013</a></td>
+      </tr>
+      <tr>
+        <td style="text-align: center">LF, IRLF, CSFRD</td>
+        <td style="text-align: center">SPIRE-selected</td>
+        <td style="text-align: center"> </td>
+        <td style="text-align: center">Vaccari et al. (mentioned in Gruppioni et al. 2013)</td>
+      </tr>
+      <tr>
+        <td style="text-align: center">LF, IRLF, CSFRD</td>
+        <td style="text-align: center">24μm-selected</td>
+        <td style="text-align: center"> </td>
+        <td style="text-align: center">Le Floc’h et al. (mentioned in Gruppioni et al. 2013)</td>
+      </tr>
+      <tr>
+        <td style="text-align: center">NF, LF, IRLF, CSFRD</td>
+        <td style="text-align: center">$0&lt;z&lt;2.3$, GOODS-N, GOODS-S</td>
+        <td style="text-align: center">SED fitting (Dale &amp; Helou 2002)</td>
+        <td style="text-align: center"><a href="http://adsabs.harvard.edu/abs/2013A%26A...553A.132M">Magnelli et al. 2013</a></td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+
+<div class="div-for-table">
+
+  <h4>Herschel Multi-tiered Extragalactic Survey (HerMES)</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: center">Research</th>
+        <th style="text-align: center">Sample</th>
+        <th style="text-align: center">Description</th>
+        <th style="text-align: center">Reference</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: center">Survey Description</td>
+        <td style="text-align: center"> </td>
+        <td style="text-align: center"><a href="http://hedam.lam.fr/HerMES/index">Home Page</a></td>
+        <td style="text-align: center"><a href="http://adsabs.harvard.edu/abs/2012MNRAS.424.1614O">Oliver et al. 2012</a></td>
+      </tr>
+      <tr>
+        <td style="text-align: center">250μm, 350μm and 500μm Catalog</td>
+        <td style="text-align: center"> </td>
+        <td style="text-align: center">SPIRE blind extraction (StarFinder)</td>
+        <td style="text-align: center"><a href="http://adsabs.harvard.edu/abs/2014yCat.8095....0O">Oliver et al. 2014</a></td>
+      </tr>
+      <tr>
+        <td style="text-align: center">250μm, 350μm and 500μm Catalog</td>
+        <td style="text-align: center">GOODS-N, LH-N, LH-SWIRE, FLS, A2218</td>
+        <td style="text-align: center"><a href="http://adsabs.harvard.edu/abs/2010MNRAS.409...48R">Roseboom et al. 2010</a></td>
+        <td style="text-align: center"> </td>
+      </tr>
+      <tr>
+        <td style="text-align: center">IR SED photo-z Catalog</td>
+        <td style="text-align: center">GOODS-N, LH-N</td>
+        <td style="text-align: center"><a href="http://adsabs.harvard.edu/abs/2012MNRAS.419.2758R">Roseboom et al. 2012</a></td>
+        <td style="text-align: center"> </td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+
+<div class="div-for-table">
+
+  <h4>COSMOS</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: center">Research</th>
+        <th style="text-align: center">Sample</th>
+        <th style="text-align: center">Description</th>
+        <th style="text-align: center">Reference</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: center">Survey Description</td>
+        <td style="text-align: center"> </td>
+        <td style="text-align: center"><a href="http://cosmos.astro.caltech.edu/page/astronomers">Home Page</a></td>
+        <td style="text-align: center"><a href="http://adsabs.harvard.edu/abs/2007ApJS..172...38S">Scoville et al. 2007</a></td>
+      </tr>
+      <tr>
+        <td style="text-align: center">Follow-up S2COSMOS</td>
+        <td style="text-align: center">COSMOS smaller area</td>
+        <td style="text-align: center">JCMT SCUBA2 850um Survey</td>
+        <td style="text-align: center">I. Smail et al.</td>
+      </tr>
+      <tr>
+        <td style="text-align: center">Follow-up STUDIES</td>
+        <td style="text-align: center">COSMOS smaller area</td>
+        <td style="text-align: center">JCMT SCUBA2 450um Survey</td>
+        <td style="text-align: center">W.-H. Wang et al.</td>
+      </tr>
+      <tr>
+        <td style="text-align: center">Follow-up FMOS-COSMOS</td>
+        <td style="text-align: center">COSMOS subsample</td>
+        <td style="text-align: center">Subaru FMOS Spectroscopic Survey</td>
+        <td style="text-align: center">Silverman et al.</td>
+      </tr>
+      <tr>
+        <td style="text-align: center">24μm Catalog</td>
+        <td style="text-align: center">COSMOS</td>
+        <td style="text-align: center">obs-frame 24μm</td>
+        <td style="text-align: center"><a href="http://adsabs.harvard.edu/abs/2009ApJ...703..222L">Le Floc’h et al. 2009</a></td>
+      </tr>
+      <tr>
+        <td style="text-align: center">Optical to Ks Catalog</td>
+        <td style="text-align: center">COSMOS</td>
+        <td style="text-align: center">VLT UltraVISTA</td>
+        <td style="text-align: center"><a href="http://adsabs.harvard.edu/abs/2013A%26A...556A..55I">Ilbert et al. 2013</a></td>
+      </tr>
+      <tr>
+        <td style="text-align: center">Optical to Ks Catalog</td>
+        <td style="text-align: center">COSMOS</td>
+        <td style="text-align: center">VLT UltraVISTA</td>
+        <td style="text-align: center"><a href="http://adsabs.harvard.edu/abs/2013ApJ...777...18M">Muzzin et al. 2013</a></td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+
+
+    </div>
+    
+    
+    
+    <!-- begin highlight selected column -->
+    <!-- 
+    <script type="text/javascript">
+      //var mytab; var mycol;
+      function selectTabColumn() {
+        //alert(mytab.rows);
+        var mytab = $(this).parent().parent();
+        var myrow = $(this).parent().index();
+        var mycol = $(this).index();
+        alert(mytab+"\n"+myrow+"\n"+mycol);
+        for (var i = 0; i < mytab.rows.length; i++) {
+          alert(mytab.rows[i].cells.length);
+          alert(mycol);
+          var myclassname = mytab.rows[i].cells[mycol].className;
+          alert(myclassname);
+          className.replace("selected", "");
+          className += "selected";
+          mytab.rows[i].cells[mycol].className = myclassname;
+          //mytab.rows[i].cells[mycol].find('td').toggleClass("highlighted");
+          //mytab.rows[i].cells[mycol].find('td').toggleClass('selected');
+          //mytabcells.eq(i).addClass("selected");
+          //var mycells = mytab.find("tr").eq(i).find("td");
+          //for (var j = 0; j < mycells.length; j++) {
+          //  //mytab.rows.eq(i).cells.eq(j).addClass("selected");
+          //  mycells.eq(j).addClass("selected");
+          //}
+        }
+      }
+      // set onclick action for all table column header cells
+      var mypage = document.getElementById("page");
+      if (mypage != null) {
+        // alert(mypage);
+        var mytabs = mypage.getElementsByTagName("table");
+          if (mytabs != null) {
+            for (var i = 0; i < mytabs.length; i++) {
+              var mytabheads = mytabs[i].getElementsByTagName("th");
+              if (mytabheads != null) {
+                for (var j = 0; j < mytabheads.length; j++) {
+                  // alert(mytabheads[j].innerHTML);
+                  // mytabheads[j].addEventListener("click", function() {selectTabColumn();}, false);
+                  mytabheads[j].addEventListener("click", function() {
+                    // onclick function - select all cells
+                    var myrow = $(this).parent().index()+1;
+                    var mycol = $(this).index()+1;
+                    var mycols = $(this).closest("table").find('td:nth-child('+mycol+')');
+                    mycols.addClass("selected");
+                    var selection = window.getSelection();
+                    selection.removeAllRanges();
+                    for (var k = 0; k < mycols.length; k++) {
+                      var range = document.createRange();
+                      range.selectNode(mycols[k]); // https://stackoverflow.com/questions/20575927/javascript-highlight-html-table-cell-onclick-and-copy-value-with-ctrl-c
+                      selection.addRange(range);
+                    }
+                    //alert("Row: "+myrow+"\n"+"Col: "+mycol+"\n"+"Sel: "+mycols.length);
+                    // OR
+                    // onclick function - manually highlight all cells then copy to clipboard
+                  }, false);
+                }
+              }
+            }
+          }
+      }
+    </script>
+    -->
+    <!-- end highlight selected column -->
+    
+    
+  </body>
+</html>

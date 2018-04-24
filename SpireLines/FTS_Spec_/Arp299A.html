@@ -1,0 +1,178 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="/stylesheet.css">
+    <link rel="stylesheet" href="/hover.css">
+    
+    <!--
+    <script src="/jas/jquery-1.10.2.js"></script>
+    -->
+  </head>
+  <body>
+    <!-- begin of header bar -->
+    <div id="head-navigator" class="head-navigator">
+      <ul>
+        <li><a href="/">Homepage</a></li>
+        <li><a href="/Research">Research</a></li>
+        <li><a href="/Wiki">Wiki</a></li> <!-- <li><a href="https://wiki-1054.rhcloud.com">Wiki</a></li> -->
+        <li><a href="/CV">CV</a></li>
+        <li><a href="/Contact">Contact</a></li>
+      </ul>
+    </div>
+    
+    <div id="head-banner" class="head-banner-with-background">
+      <h1></h1>
+      
+    </div>
+    
+    <!-- end of header bar --> 
+    
+    
+    
+    <!-- 
+    <div id="main">
+    -->
+    <div id="page" class="page">
+      <div id="wrapper">
+	
+	<!-- begin of header bar -->
+	 
+	<div id="menu-wrapper">
+		<div id="menu" class="container">
+			<ul>
+				<li class="current_page_item"><a href="/">Homepage</a></li>
+				<li><a href="/Research">Research</a></li>
+				<li><a href="https://wiki-1054.rhcloud.com">Wiki</a></li>
+				<li><a href="/CV">CV</a></li>
+				<li><a href="/Contact">Contact</a></li>
+			</ul>
+		</div>
+		<div id="header-wrapper">
+			<div id="header" class="container">
+				<div id="logo">
+					<h1><a href="/SpireLines/FTS_Spec_/Arp299A/">Herschel SPIRE FTS Spectrum - Arp299A</a></h1>
+					<p><a href="/SpireLines/FTS_Spec_/Mrk231/">Mrk231</a>
+						<a href="/SpireLines/FTS_Spec_/Arp220/">Arp220</a>
+						<a href="/SpireLines/FTS_Spec_/Arp299A/">Arp299A</a>
+						<a href="/SpireLines/FTS_Spec_/NGC4945/">NGC4945</a></p>
+					<!--<p>Daizhong LIU</p>-->
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- end of header bar --> 
+	
+   	
+	
+	<div id="SpireLines_FTS_Spec" class="SpireLines_FTS_Spec">
+	   <canvas id="SpireLines_FTS_Spec_Area" class="SpireLines_FTS_Spec_Area">
+	        
+	        <!-- 
+	        <iframe src="/SpireLines/FTS_Spec_/Mrk231_SFIT_.pdf#view=FitH&toolbar=0" width="6000px" height="100%" class="SpireLines_FTS_Spec_Area_PDF">
+	        </iframe>
+			-->
+	        
+	        <!-- 
+			<script src='/jas/pdfobject.js'></script>
+			<script>
+				//Be sure your document contains an element with the CSS selector "SpireLines_FTS_Spec"
+				var options = {
+				   width: "6000px", 
+				   pdfOpenParams: { view: 'FitBV', toolbar: '0', statusbar: '0', messages: '0', navpanes: '0', fdf: '/SpireLines/FTS_Spec_/Mrk231_SFIT_.pdf' }
+				};
+				PDFObject.embed("/SpireLines/FTS_Spec_/Mrk231_SFIT_.pdf", "#SpireLines_FTS_Spec_Area", options);
+			</script>
+			-->
+			
+			<script type='text/javascript' src="/jas/pdf.js"></script>
+			<script type='text/javascript' src="/jas/pdf.worker.js"></script>
+			<script type='text/javascript' src="/jas/spirelines.fts.spec.area.js"></script>
+			<script type='text/javascript'>
+			SpireLines_FTS_Spec_Area_Plot("/SpireLines/FTS_Spec_/Arp299A_SFIT_.pdf")
+			</script>
+			
+		</canvas>
+	</div>
+	
+	
+	
+</div>
+
+
+
+    </div>
+    
+    
+    
+    <!-- begin highlight selected column -->
+    <!-- 
+    <script type="text/javascript">
+      //var mytab; var mycol;
+      function selectTabColumn() {
+        //alert(mytab.rows);
+        var mytab = $(this).parent().parent();
+        var myrow = $(this).parent().index();
+        var mycol = $(this).index();
+        alert(mytab+"\n"+myrow+"\n"+mycol);
+        for (var i = 0; i < mytab.rows.length; i++) {
+          alert(mytab.rows[i].cells.length);
+          alert(mycol);
+          var myclassname = mytab.rows[i].cells[mycol].className;
+          alert(myclassname);
+          className.replace("selected", "");
+          className += "selected";
+          mytab.rows[i].cells[mycol].className = myclassname;
+          //mytab.rows[i].cells[mycol].find('td').toggleClass("highlighted");
+          //mytab.rows[i].cells[mycol].find('td').toggleClass('selected');
+          //mytabcells.eq(i).addClass("selected");
+          //var mycells = mytab.find("tr").eq(i).find("td");
+          //for (var j = 0; j < mycells.length; j++) {
+          //  //mytab.rows.eq(i).cells.eq(j).addClass("selected");
+          //  mycells.eq(j).addClass("selected");
+          //}
+        }
+      }
+      // set onclick action for all table column header cells
+      var mypage = document.getElementById("page");
+      if (mypage != null) {
+        // alert(mypage);
+        var mytabs = mypage.getElementsByTagName("table");
+          if (mytabs != null) {
+            for (var i = 0; i < mytabs.length; i++) {
+              var mytabheads = mytabs[i].getElementsByTagName("th");
+              if (mytabheads != null) {
+                for (var j = 0; j < mytabheads.length; j++) {
+                  // alert(mytabheads[j].innerHTML);
+                  // mytabheads[j].addEventListener("click", function() {selectTabColumn();}, false);
+                  mytabheads[j].addEventListener("click", function() {
+                    // onclick function - select all cells
+                    var myrow = $(this).parent().index()+1;
+                    var mycol = $(this).index()+1;
+                    var mycols = $(this).closest("table").find('td:nth-child('+mycol+')');
+                    mycols.addClass("selected");
+                    var selection = window.getSelection();
+                    selection.removeAllRanges();
+                    for (var k = 0; k < mycols.length; k++) {
+                      var range = document.createRange();
+                      range.selectNode(mycols[k]); // https://stackoverflow.com/questions/20575927/javascript-highlight-html-table-cell-onclick-and-copy-value-with-ctrl-c
+                      selection.addRange(range);
+                    }
+                    //alert("Row: "+myrow+"\n"+"Col: "+mycol+"\n"+"Sel: "+mycols.length);
+                    // OR
+                    // onclick function - manually highlight all cells then copy to clipboard
+                  }, false);
+                }
+              }
+            }
+          }
+      }
+    </script>
+    -->
+    <!-- end highlight selected column -->
+    
+    
+  </body>
+</html>

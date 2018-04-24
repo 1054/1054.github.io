@@ -1,0 +1,347 @@
+/* @import url('https://fonts.googleapis.com/css?family=Lora'); */
+@import 'https://fonts.googleapis.com/css?family=Crimson+Text';
+
+
+
+/*********************************************************************************/
+/* Head navigator                                                                */
+/*********************************************************************************/
+
+.head-navigator
+{
+    color: #FFFFFF;
+    background: #16a085;
+    font-family: Crimson Text, Georgia, Palatino, serif;
+    font-weight: 700;
+    font-size: 1.5em;
+}
+
+.head-navigator ul {
+    margin: 0;
+    padding: 0px 0px 0px 0px;
+    list-style: none;
+    line-height: normal;
+    text-align: center;
+}
+
+.head-navigator li {
+    display: inline-block;
+}
+
+.head-navigator a {
+    display: block;
+    letter-spacing: 1px;
+    padding: 0px 40px;
+    border: none;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 2.0em;
+    color: #FFFFFF;
+}
+
+.head-navigator a:hover{
+    color: #FFFFFF;
+    background: #1abc9c;
+    text-decoration: none;
+}
+
+
+/*********************************************************************************/
+/* Head banner                                                                   */
+/*********************************************************************************/
+
+.head-banner {
+    color: #FFFFFF;
+    background: #333333;
+    text-align: center;
+    overflow: hidden;
+    font-family: Crimson Text, Georgia, Palatino, serif;
+    font-weight: 700;
+    font-size: 12pt;
+    /* line-height: 2.0em; */
+}
+
+.head-banner a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.head-banner-with-background {
+    color: #FFFFFF;
+    background: #333333;
+    text-align: left;
+    text-indent: 8%;
+    overflow: hidden;
+    font-family: Crimson Text, Georgia, Palatino, serif;
+    font-weight: 700;
+    font-size: 12pt;
+    /* line-height: 2.0em; */
+    background: url("images/Earth and Moon.jpg") no-repeat center;
+    background-size: cover;
+    min-height: 150px;
+}
+
+.head-banner-image {
+    overflow: hidden;
+    height: 15em;
+    background: url("images/Earth and Moon.jpg") no-repeat center;
+    background-size: cover;
+}
+
+
+/*********************************************************************************/
+/* page                                                                          */
+/*********************************************************************************/
+
+/*
+.page-set-table-floating div {
+    float: left;
+    text-align: center;
+}
+*/
+
+.page {
+    font-family: Crimson Text, Georgia, Palatino, serif;
+    /* position: relative; /* if putting sidebar to the right-bottom */
+}
+
+.div-for-center {
+    width: 70%;
+    /* float: left; */
+    text-align: center;
+    /* margin: 0.25em 5% 0.05em 5%; /* top right bottom left */
+    margin: auto; 
+    display: inline-block;
+    border: 0px solid lightblue;
+    border-radius: 5px;
+    font-size: 10pt;
+}
+
+.div-align-center {
+    width: 70%;
+    /* float: left; */
+    text-align: center;
+    /* margin: 0.25em 5% 0.05em 5%; /* top right bottom left */
+    margin: auto; 
+    display: inline-block;
+    border: 0px solid lightblue;
+    border-radius: 5px;
+    font-size: 10pt;
+}
+
+.div-align-left {
+    width: 70%;
+    /* float: left; */
+    text-align: left;
+    margin-left: 8%;
+    /* margin: 0.25em 5% 0.05em 5%; /* top right bottom left */
+    /* margin: auto; */
+    display: inline-block;
+    border: 0px solid lightblue;
+    border-radius: 5px;
+    font-size: 10pt;
+}
+
+.div-for-table {
+    float: left;
+    text-align: center;
+    margin: 2em 3em 1em 3em; /* top right bottom left */
+    border: 3px solid lightblue;
+    border-radius: 5px;
+}
+
+.div-for-table-full-width {
+    width: 100%;
+    /* float: left; */
+    text-align: center;
+    /* margin: 0.25em 5% 0.05em 5%; /* top right bottom left */
+    margin: auto; 
+    display: inline-block;
+    white-space: nowrap;
+    overflow: scroll;
+    border: 0px solid lightblue;
+    border-radius: 5px;
+    font-size: 10pt;
+}
+
+.div-for-table-full-width table {
+    width: 100%;
+}
+
+.page h2 {
+    font-size: 1.6em;
+}
+
+.page h3 {
+    font-size: 1.6em;
+    line-height: 1.6em;
+    margin-top: 1.6em;
+    margin-bottom: 0.2em;
+    background: lightblue;
+    border-color: white;
+}
+
+.page h4 {
+    font-size: 1.3em;
+    line-height: 1.3em;
+    margin-top: 1.3em;
+    margin-bottom: 0.2em;
+    background: #CBF6FF;
+    border-color: white;
+}
+
+.page h5, h6 {
+    font-size: 1.2em;
+    line-height: 1.2em;
+    margin-top: 0.6em;
+    margin-bottom: 0em;
+}
+
+/*
+.page h4, h5, h6 {
+    font-size: 1.2em;
+    line-height: 1.2em;
+    margin-top: 1.2em;
+    margin-bottom: 0em;
+    background: lightblue;
+    border-color: white;
+}
+*/
+
+.page table {
+    border-spacing: 0.15em;
+    /* border-collapse: collapse; */
+    /* border: 1px solid lightblue; */
+}
+
+.page table th {
+    background: lightblue;
+    border-color: white;
+}
+
+.page table td {
+    border: 0.5px solid lightblue;
+    padding:0 2px 0 2px;
+}
+
+.page ul {
+    text-align: left;
+}
+
+.mjx-chtml {
+    text-align: left !important;
+}
+
+/***********************/
+/* List style for Wiki */
+/* https://codepen.io/secondfret/pen/mIBqf */
+/***********************/
+#Wiki ul {
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+#Wiki li {
+    border-bottom: 1px solid #ccc;
+    font-size: 1.2em;
+    padding-top: 0.2em;
+    padding-bottom: 0em;
+    height: 1.6em;
+}
+#Wiki li:last-child {
+    border: none;
+}
+#Wiki li a {
+    text-decoration: none;
+    color: #000;
+    -webkit-transition: font-size 0.1s ease, background-color 0.1s ease;
+    -moz-transition: font-size 0.1s ease, background-color 0.1s ease;
+    -o-transition: font-size 0.1s ease, background-color 0.1s ease;
+    -ms-transition: font-size 0.1s ease, background-color 0.1s ease;
+    transition: font-size 0.1s ease, background-color 0.1s ease;
+    display: block;
+    height: 1.6em;
+}
+
+#Wiki li:hover {
+    background: #f6f6f6;
+}
+
+#Wiki li a:hover {
+}
+
+/***************************/
+/* List style for Research */
+/* https://codepen.io/secondfret/pen/mIBqf */
+/***************************/
+#Research ul {
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+#Research li {
+    border-bottom: 1px solid #ccc;
+    font-size: 1.6em;
+    padding-top: 0.2em;
+    padding-bottom: 0em;
+    height: 2.0em;
+}
+#Research li:last-child {
+    border: none;
+}
+#Research li a {
+    text-decoration: none;
+    color: #000;
+    -webkit-transition: font-size 0.1s ease, background-color 0.1s ease;
+    -moz-transition: font-size 0.1s ease, background-color 0.1s ease;
+    -o-transition: font-size 0.1s ease, background-color 0.1s ease;
+    -ms-transition: font-size 0.1s ease, background-color 0.1s ease;
+    transition: font-size 0.1s ease, background-color 0.1s ease;
+    display: block;
+    height: 2.0em;
+}
+
+#Research li:hover {
+    background: #f6f6f6;
+}
+
+#Research li a:hover {
+}
+
+/*********************************************************************************/
+/* sidebar                                                                       */
+/*********************************************************************************/
+
+#sidebar
+{
+	overflow: hidden;
+	float: right;
+	width: 20%;
+	/* position: absolute; bottom: 0; right: 0; /* if putting sidebar to the right-bottom */
+}
+
+#sidebar .title h2
+{
+	color: #363636;
+}
+
+#sidebar .box1
+{
+	/* margin-bottom: 3em; */
+}
+
+#sidebar ul
+{
+    /* -webkit-padding-start: 1em; */
+    margin-left: -1em;
+}
+
+#sidebar ul ul
+{
+    /* -webkit-padding-start: 1em; */
+    margin-left: -2em;
+}
+
+
+/*********************************************************************************/
+/*                                                                               */
+/*********************************************************************************/
