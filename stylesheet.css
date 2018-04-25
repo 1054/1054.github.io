@@ -169,6 +169,17 @@
     width: 100%;
 }
 
+.div-for-figure-half-width {
+    width: auto;
+    float: left;
+    margin: 1em 1em 1em 1em;
+}
+
+.div-for-figure-half-width img {
+    width: 100%;
+    box-shadow: 8px 8px 10px #aaa;
+}
+
 .page h2 {
     font-size: 1.6em;
 }
