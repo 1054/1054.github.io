@@ -1,0 +1,208 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Math - Integrating Planck Law function</title>
+    <link rel="stylesheet" href="/stylesheet.css">
+    <link rel="stylesheet" href="/hover.css">
+    
+    <script type="text/x-mathjax-config">
+      /*<![CDATA[*/MathJax.Hub.Config({
+      tex2jax: {
+          inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+          displayMath: [ ["$$","$$"], ["\\[","\\]"] ],
+          displayAlign: "left", 
+          processEscapes: true
+        }
+      });
+      /*!]]>*/
+    </script>
+    <!-- 
+    <script type="text/javascript" charset="utf-8" src="/jas/mathjax/MathJax.js?config=TeX-AMS_CHTML"></script>
+    -->
+    <!--"https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML"-->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+    
+    <!--
+    <script src="/jas/jquery-1.10.2.js"></script>
+    -->
+  </head>
+  <body>
+    <!-- begin of header bar -->
+    <div id="head-navigator" class="head-navigator">
+      <ul>
+        <li><a href="/">Homepage</a></li>
+        <li><a href="/Research">Research</a></li>
+        <li><a href="/Wiki">Wiki</a></li> <!-- <li><a href="https://wiki-1054.rhcloud.com">Wiki</a></li> -->
+        <li><a href="/CV">CV</a></li>
+        <li><a href="/Contact">Contact</a></li>
+      </ul>
+    </div>
+    
+    <div id="head-banner" class="head-banner-with-background">
+      <h1>Math - Integrating Planck Law function</h1>
+      
+    </div>
+    
+    <!-- end of header bar --> 
+    
+    
+    
+    <!-- 
+    <div id="main">
+    -->
+    <div id="page" class="page">
+      
+<h4>Integrating Planck Law function</h4>
+
+<p><a href="https://en.wikipedia.org/wiki/Planck%27s_law">Planck’s law</a> has the form of</p>
+
+<script type="math/tex; mode=display">\begin{equation}
+\begin{split}
+\displaystyle
+\frac{2 h \nu^3}{c^2} \frac{1}{e^{\frac{h \nu}{k_{\mathrm{B}} T}} - 1} \\
+\end{split}
+\end{equation}</script>
+
+<p>Its integral can be obtained by using the <a href="https://en.wikipedia.org/wiki/Riemann_zeta_function">Riemann zeta function</a></p>
+
+<script type="math/tex; mode=display">% <![CDATA[
+\begin{equation}
+\begin{split}
+\displaystyle
+\zeta(s) &\equiv \sum_{n=1}^{\infty } n^{-s} \\
+&= {\frac{1}{1^{s}}} + {\frac{1}{2^{s}}} + {\frac{1}{3^{s}}} + \cdots \\
+&\qquad \mathrm{when} \operatorname {Re} (s)>1
+\end{split}
+\end{equation} %]]></script>
+
+<p>which can also be defined by the integral</p>
+
+<script type="math/tex; mode=display">% <![CDATA[
+\begin{equation}
+\begin{split}
+\displaystyle
+\zeta(s) &= \frac{1}{\Gamma(s)} \int_{0}^{\infty} {\frac {1}{e^{x}-1}} \, x^{s} {\frac{\mathrm{d} x}{x}} 
+\end{split}
+\end{equation} %]]></script>
+
+<p>where $\Gamma(s)$ is the <a href="https://en.wikipedia.org/wiki/Gamma_function">gamma function</a></p>
+
+<script type="math/tex; mode=display">% <![CDATA[
+\begin{equation}
+\begin{split}
+\displaystyle
+\Gamma(s) &\equiv \int_{0}^{\infty} e^{-x} \, x^{s} {\frac{\mathrm{d} x}{x}} = (s-1)! \\
+& \mathrm{e.g., } \\
+\Gamma(4) &= \int_{0}^{\infty} e^{-x} \, x^{4} {\frac{\mathrm{d} x}{x}} \\
+&= \int_{0}^{\infty} e^{-x} \, x^{3} {\mathrm{d} x} \\
+& \mathrm{let \ } u \equiv x^{3} \ \mathrm{and} \ v \equiv e^{-x}, \ \mathrm{so} \ \frac{\mathrm{d} u}{\mathrm{d} x} = 3 \times x^{2} \ \mathrm{and} \ \frac{\mathrm{d} v}{\mathrm{d} x} = e^{x} \\
+& \mathrm{and \ considering \ integration \ by \ parts \ } u v = \int u \, (\frac{\mathrm{d} v}{\mathrm{d} x}) \, {\mathrm{d} x} + \int (\frac{\mathrm{d} u}{\mathrm{d} x}) \, v \, {\mathrm{d} x} \\
+& \mathrm{i.e., } \ x^{3} \, e^{-x} = \int x^{3} \, e^{x} \, {\mathrm{d} x} + \int 3 \times x^{2} \, e^{x} \, {\mathrm{d} x}, \ \mathrm{etc.} \\
+& \mathrm{so} \ \Gamma(4) = x^3 \, e^{-x} - 3 \times x^2 \, e^{-x} + 3 \times 2 \times x^1 \, e^{-x} - 3 \times 2 \times 1 \times e^{-x} \, |_{x=0}^{\infty} \\
+& \mathrm{so} \ \Gamma(4) = 3 \times 2 \times 1 \equiv 3! \\
+\end{split}
+\end{equation} %]]></script>
+
+<p>Therefore, when letting $x \equiv \frac{h \nu}{k_{\mathrm{B}} T}$, ${\mathrm{d} x} = \frac{h}{k_{\mathrm{B}} T} \times {\mathrm{d} \nu}$, the integral of Planck law is</p>
+
+<script type="math/tex; mode=display">% <![CDATA[
+\begin{equation}
+\begin{split}
+\displaystyle
+& \int_{\nu=0}^{+\infty} \frac{2 h \nu^3}{c^2} \frac{1}{e^{\frac{h \nu}{k_{\mathrm{B}} T}} - 1} {\mathrm{d} \nu} \\
+&= \int_{\nu=0}^{+\infty} \frac{2 h}{c^2} (\frac{k_{\mathrm{B}} T}{h})^3 x^3 \frac{1}{e^{x} - 1} \frac{k_{\mathrm{B}} T}{h} {\mathrm{d} x} \\
+&= \int_{\nu=0}^{+\infty} \frac{2 h}{c^2} (\frac{k_{\mathrm{B}} T}{h})^4 x^4 \frac{1}{e^{x} - 1} \frac{{\mathrm{d} x}}{x} \\
+&= \frac{2 h}{c^2} (\frac{k_{\mathrm{B}} T}{h})^4 \, \zeta(4) \times \Gamma(4) \\
+\end{split}
+\end{equation} %]]></script>
+
+<p>Then, since ${\displaystyle \zeta (4)=1+{\frac {1}{2^{4}}}+{\frac {1}{3^{4}}}+\cdots ={\frac {\pi ^{4}}{90}}\approx 1.08232323371113819152}$ (<a href="https://en.wikipedia.org/wiki/Riemann_zeta_function">Wikipedia</a>) and $\displaystyle \Gamma(4) = 3! = 6$ (<a href="https://en.wikipedia.org/wiki/Gamma_function">Wikipedia</a>), we can derive:</p>
+
+<script type="math/tex; mode=display">% <![CDATA[
+\begin{equation}
+\begin{split}
+\displaystyle
+& \int_{\nu=0}^{+\infty} \frac{2 h \nu^3}{c^2} \frac{1}{e^{\frac{h \nu}{k_{\mathrm{B}} T}} - 1} {\mathrm{d} \nu} \\
+&= \frac{2 h}{c^2} (\frac{k_{\mathrm{B}} T}{h})^4 \, \zeta(4) \times \Gamma(4) \\
+&= \frac{2 h}{c^2} (\frac{k_{\mathrm{B}} T}{h})^4 \, \frac{\pi^4}{90} \times 6 \\
+&= \frac{2 h}{c^2} (\frac{k_{\mathrm{B}} T}{h})^4 \, \frac{\pi^4}{90} \times 6 \\
+\end{split}
+\end{equation} %]]></script>
+
+<p>This is exactly the <a href="https://en.wikipedia.org/wiki/Stefan%E2%80%93Boltzmann_law">Stefan-Boltzmann Law</a>.</p>
+
+
+    </div>
+    
+    
+    
+    <!-- begin highlight selected column -->
+    <!-- 
+    <script type="text/javascript">
+      //var mytab; var mycol;
+      function selectTabColumn() {
+        //alert(mytab.rows);
+        var mytab = $(this).parent().parent();
+        var myrow = $(this).parent().index();
+        var mycol = $(this).index();
+        alert(mytab+"\n"+myrow+"\n"+mycol);
+        for (var i = 0; i < mytab.rows.length; i++) {
+          alert(mytab.rows[i].cells.length);
+          alert(mycol);
+          var myclassname = mytab.rows[i].cells[mycol].className;
+          alert(myclassname);
+          className.replace("selected", "");
+          className += "selected";
+          mytab.rows[i].cells[mycol].className = myclassname;
+          //mytab.rows[i].cells[mycol].find('td').toggleClass("highlighted");
+          //mytab.rows[i].cells[mycol].find('td').toggleClass('selected');
+          //mytabcells.eq(i).addClass("selected");
+          //var mycells = mytab.find("tr").eq(i).find("td");
+          //for (var j = 0; j < mycells.length; j++) {
+          //  //mytab.rows.eq(i).cells.eq(j).addClass("selected");
+          //  mycells.eq(j).addClass("selected");
+          //}
+        }
+      }
+      // set onclick action for all table column header cells
+      var mypage = document.getElementById("page");
+      if (mypage != null) {
+        // alert(mypage);
+        var mytabs = mypage.getElementsByTagName("table");
+          if (mytabs != null) {
+            for (var i = 0; i < mytabs.length; i++) {
+              var mytabheads = mytabs[i].getElementsByTagName("th");
+              if (mytabheads != null) {
+                for (var j = 0; j < mytabheads.length; j++) {
+                  // alert(mytabheads[j].innerHTML);
+                  // mytabheads[j].addEventListener("click", function() {selectTabColumn();}, false);
+                  mytabheads[j].addEventListener("click", function() {
+                    // onclick function - select all cells
+                    var myrow = $(this).parent().index()+1;
+                    var mycol = $(this).index()+1;
+                    var mycols = $(this).closest("table").find('td:nth-child('+mycol+')');
+                    mycols.addClass("selected");
+                    var selection = window.getSelection();
+                    selection.removeAllRanges();
+                    for (var k = 0; k < mycols.length; k++) {
+                      var range = document.createRange();
+                      range.selectNode(mycols[k]); // https://stackoverflow.com/questions/20575927/javascript-highlight-html-table-cell-onclick-and-copy-value-with-ctrl-c
+                      selection.addRange(range);
+                    }
+                    //alert("Row: "+myrow+"\n"+"Col: "+mycol+"\n"+"Sel: "+mycols.length);
+                    // OR
+                    // onclick function - manually highlight all cells then copy to clipboard
+                  }, false);
+                }
+              }
+            }
+          }
+      }
+    </script>
+    -->
+    <!-- end highlight selected column -->
+    
+    
+  </body>
+</html>

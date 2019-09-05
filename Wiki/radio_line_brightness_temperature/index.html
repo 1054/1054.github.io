@@ -156,32 +156,209 @@ $ (\frac{S_{\mathrm{mol}} \Delta v}{[\mathrm{Jy \, km \, s^{-1}}]}) = 0.04355277
 
 <h3>Radiative Transfer Calculation Equations</h3>
 
-<h4>Calculating [CI]</h4>
+<h4>Radio Main Beam Brightness Temperature</h4>
 
-<p>$T_{\mathrm{R}} = T_{0} \left(\frac{1}{e^{T_{0}/T_{ex}}-1} - \frac{1}{e^{T_{0}/T_{bg}}-1} \right) (1-e^{-\tau})$, where $T_{0} \equiv h \nu / k$.</p>
+<p>Radiative transfer equation defines that the observed flux density is from emitting and absorption sources along the line of sight at frequency $\nu$. Assuming the emitting sources (background and excited gas) are blackbody with energy spectrum (named source function) following Planck function (i.e., LTE), we have:</p>
 
-<p>Applying $\tau \gg 1$, $T_{bg} = 2.73 \ \mathrm{K}$, $T_{0,\mathrm{CO(1-0)}} = 5.5 \ \mathrm{K}$, we have:</p>
+<p>$I_{\nu} = B_{\nu} (T_{bg}) e^{-\tau_{\nu}} + B_{\nu} (T_{ex}) (1-e^{-\tau_{\nu}})$</p>
 
-<p>$T_{R,\mathrm{CO(1-0)},max} = 5.5/{(e^{5.5/T_{ex}}-1)} - 0.846$</p>
+<p>(e.g., see Spitzer, 1978, Physical Processes in the Interstellar Medium, Eq. (3-6))</p>
+
+<p>Substituting $B_{\nu} (T)$ with Planck function, we have,</p>
+
+<p>$T_{\mathrm{R}} = T_{0} \left(\frac{1}{e^{T_{0}/T_{ex}}-1} - \frac{1}{e^{T_{0}/T_{bg}}-1} \right) (1-e^{-\tau})$, where $T_{0} \equiv h \nu / k$, and $\nu$ is the transition line rest-frame frequency. $T_{bg}$ is usually $T_{\mathrm{CMB}}$.</p>
+
+<p>(e.g., see Dickman 1978)</p>
+
+<p>When $h \nu / k \ll 1$, we can apply the Rayleigh-Jeans approximation to get:</p>
+
+<p>$T_{\mathrm{R}} \approx T_{bg} e^{-\tau_{\nu}} + T_{ex} (1-e^{-\tau_{\nu}})$.</p>
+
+<p>(e.g., see Spitzer, 1978, Physical Processes in the Interstellar Medium, Eq. (3-8))</p>
+
+<h4>Calculating CO</h4>
+
+<p>Under LTE.</p>
+
+<p>Assuming $\tau \gg 1$ (optically thick, so that $(1-e^{-\tau_{\nu}}) \approx 1$), 
+$T_{bg} = 2.73 \ \mathrm{K}$, 
+and with $T_{0,\mathrm{CO(1-0)}} = 5.53 \ \mathrm{K}$, 
+we have:</p>
+
+<p>$T_{R,\mathrm{CO(1-0)},max} = 5.53 \times ( 1 / (\exp(5.53/T_{ex})-1) - 1 / (\exp(5.53/2.73)-1) ) = 5.53 \times ( 1 / (\exp(5.53/T_{ex})-1) - 0.152 ) = 5.53 / (\exp(5.53/T_{ex})-1) - 0.84 $</p>
+
+<p>(e.g., see Pineda et al. 2008 Eq.(6))</p>
 
 <p>So:</p>
 
-<p>$T_{ex} = 5.5 \, / \left( {\ln [ 1 + 5.5/(T_{R,\mathrm{CO(1-0)},max} + 0.846) ]} \right)$</p>
+<p>$T_{ex} = 5.53 \, / \big( \ln \left( 1 + 5.53/(T_{R,\mathrm{CO(1-0)},max} + 0.84) \right) \big) $</p>
 
-<p>Then we can calculate the optical depth $\tau$ for [CI] with:</p>
+<p>Similarly,</p>
 
-<p>$T_{R,\mathrm{[CI](1-0)}} = T_{0,\mathrm{[CI](1-0)}} \left( \frac{1}{e^{T_{0,\mathrm{[CI](1-0)}}/T_{ex}}-1} - \frac{1}{e^{T_{0,\mathrm{[CI](1-0)}}/T_{bg}}-1} \right) (1 - e^{-\tau})$</p>
+<p>$T_{ex} = (16.60-5.53) \, / \big( \ln \left( 1 + (16.60-5.53)/(T_{R,\mathrm{CO(2-1)},max} + [(16.60-5.53)/(\exp((16.60-5.53)/2.73)-1)] ) \right) \big) = 11.07 \, / \big( \ln \left( 1 + 11.07/(T_{R,\mathrm{CO(2-1)},max} + 0.195) \right) \big) $</p>
 
-<p>Applying $T_{bg} = 2.73 \ \mathrm{K}$, $T_{0,\mathrm{[CI](1-0)}} = 24 \ \mathrm{K}$, we have:</p>
+<h4>Calculating [CI]</h4>
 
-<p>$(1 - e^{-\tau}) = \frac{T_{R,\mathrm{[CI](1-0)}}}{T_{0,\mathrm{[CI](1-0)}}} \left( \frac{1}{e^{24/T_{ex}}-1} - \frac{1}{e^{24/2.73}-1} \right)^{-1} $</p>
+<p>Under LTE.</p>
+
+<p>Assuming $\tau \ll 1$ (optically thin, so that $(1-e^{-\tau_{\nu}}) \approx \tau$),
+$T_{bg} = 2.73 \ \mathrm{K}$, 
+and with $T_{0,\mathrm{[CI](^3P_1-^3P_0)}} = 23.6 \ \mathrm{K}$ and $T_{0,\mathrm{[CI](^3P_2-^3P_1)}} = 62.5 - 23.6 = 38.9 \ \mathrm{K}$, 
+we have:</p>
+
+<p>$T_{R,\mathrm{[CI](^3P_1-^3P_0)},max} = 23.6 \times ( 1 / (\exp(23.6/T_{ex})-1) - 1 / (\exp(23.6/2.73)-1) ) \times \tau = 23.6 / (\exp(23.6/T_{ex})-1) - [23.6/(\exp(23.6/2.73)-1)] = 23.6 \, \tau / (\exp(23.6/T_{ex})-1) - 0.004156 \, \tau $</p>
+
+<p>$T_{R,\mathrm{[CI](^3P_2-^3P_1)},max} = 38.9 \times ( 1 / (\exp(38.9/T_{ex})-1) - 1 / (\exp(38.9/2.73)-1) ) \times \tau = 23.6 / (\exp(23.6/T_{ex})-1) - [38.9/(\exp(38.9/2.73)-1)] = 38.9 \, \tau / (\exp(38.9/T_{ex})-1) - 0.00002521 \, \tau $</p>
+
+<p>So that</p>
+
+<p>$T_{ex} = 23.6 \, / \big( \ln \left( 1 + 23.6/(T_{R,\mathrm{[CI](^3P_1-^3P_0)},max} \, \tau + [23.6/(\exp(23.6/2.73)-1)] \, \tau ) \right) \big) = 23.6 \, / \big( \ln \left( 1 + 23.6 \, \tau / (T_{R,\mathrm{[CI](^3P_1-^3P_0)},max} + 0.004156 \, \tau) \right) \big) $</p>
+
+<p>$T_{ex} = 38.9 \, / \big( \ln \left( 1 + 38.9/(T_{R,\mathrm{[CI](^3P_2-^3P_1)},max} \, \tau + [38.9/(\exp(38.9/2.73)-1)] \, \tau ) \right) \big) = 38.9 \, / \big( \ln \left( 1 + 38.9 \, \tau / (T_{R,\mathrm{[CI](^3P_2-^3P_1)},max} + 0.00002521 \, \tau) \right) \big) $</p>
+
+<p>And the line ratio (when ignoring $T_{bg}$):</p>
+
+<p>$T_{R,\mathrm{[CI](^3P_2-^3P_1)}} / T_{R,\mathrm{[CI](^3P_1-^3P_0)}} \approx \frac{38.9}{23.6} \frac{\exp(23.6/T_{ex})-1}{\exp(38.9/T_{ex})-1} \frac{\tau_{\mathrm{[CI](^3P_2-^3P_1)}}}{\tau_{\mathrm{[CI](^3P_1-^3P_0)}}} $</p>
+
+<p>Note that $\tau$ is different and unknown.</p>
+
+<p>However, with connection between optical depth $\tau$ and column density $N \equiv \int n \mathrm{d} s$, and Boltzmann equation and detailed balance equation and statistical equilibrium, we can derive the connection between $T_{ex}$ and the line ratio.</p>
+
+<p>Firstly, radiation transfer equation means that the absorption is caused by stimulated (de-)excitation, the absorption coefficient $\kappa_{\nu} \equiv \frac{h \nu}{4 \pi} (n_{l} B_{lu} - n_{u} B_{ul}) \phi_{\nu} $ (e.g., Mangum &amp; Shirley 2015 Eq. 13; see also RADEX manual $\alpha_{\nu}$).</p>
+
+<p>Applying Einstein A B coefficients relations, $g_u B_{ul} \equiv g_l B_{lu}$ and $ A_{ul} \equiv \frac{2 h \nu^3}{c^2} B_{ul} $, we have $\kappa_{\nu} = \frac{c^2}{8 \pi \nu^2} A_{ul} (\frac{g_u}{g_l} n_l - n_u) \phi_{\nu} = \frac{c^2}{8 \pi \nu^2} A_{ul} \frac{g_u}{g_l} n_l (1 - \frac{g_l n_u}{g_u n_l}) \phi_{\nu} $.</p>
+
+<p>Integrating $\kappa_{\nu}$ makes $\tau_{\nu}$ ($\mathrm{d} \tau_{\nu} \equiv \kappa_{\nu} \mathrm{d} s$, along the line of sight), so $\int \tau_{\nu} \mathrm{d} \nu = \frac{c^2}{8 \pi \nu^2} A_{ul} \phi_{\nu} \frac{g_u}{g_l} \int n_l (1 - \frac{g_l n_u}{g_u n_l}) \mathrm{d} s = \frac{c^2}{8 \pi \nu^2} A_{ul} \phi_{\nu} \frac{g_u}{g_l} N_l (1 - \frac{g_l N_u}{g_u N_l}) $ (e.g., Mangum &amp; Shirley 2015 Eq. 29).</p>
+
+<p>Applying Boltzmann equation, $\frac{g_l n_u}{g_u n_l} = \exp(-h \nu / (k T))$, we have $\int \tau_{\nu} \mathrm{d} \nu = \frac{c^2}{8 \pi \nu^2} A_{ul} \phi_{\nu} \frac{g_u}{g_l} N_l (1 - \exp(-h \nu / (k T))) = \frac{c^2}{8 \pi \nu^2} A_{ul} \phi_{\nu} N_u \exp(h \nu / (k T)) (1 - \exp(-h \nu / (k T))) = \frac{c^2}{8 \pi \nu^2} A_{ul} \phi_{\nu} N_u ( \exp(h \nu / (k T)) - 1) $.</p>
+
+<p>$\phi_{\nu}$ is the line profile, so that $\int \phi_{\nu} \mathrm{d} \nu = 1$.</p>
+
+<p>When $h \nu / (k T) \ll 1$, approximately $\int \tau_{\nu} \mathrm{d} \nu \approx \frac{c^2}{8 \pi \nu^2} A_{ul} \frac{g_u}{g_l} N_l \frac{h \nu}{k T_{ex}}$.</p>
+
+<p>Then, $T_{R} = T_{ex} (1-\exp(-\tau)) \approx T_{ex} \, \tau$, so the integration over line velocity $\int T_{R} \mathrm{d} v = \int T_{R} \mathrm{d} \nu \times (\frac{c}{\nu})  \approx \int T_{ex} \tau_{\nu} \mathrm{d} \nu \times (\frac{c}{\nu})  \approx \frac{c^3}{8 \pi \nu^3} A_{ul} \frac{g_u}{g_l} N_l \frac{h \nu}{k}$. (see <a href="https://astro.uni-bonn.de/~uklein/teaching/ISM/InterstellarMedium.pdf">this lecture</a> Eq. 4.47 and 4.52.)</p>
+
+<p>Therefore, line ratio $\int T_{R,\mathrm{[CI](^3P_2-^3P_1)}} \mathrm{d} v / \int T_{R,\mathrm{[CI](^3P_1-^3P_0)}} \mathrm{d} v \approx \frac{A21}{A10} \frac{\nu_{10}^2}{\nu_{21}^2} \frac{g_2}{g_1} \frac{g_0}{g_1} \frac{N_1}{N_0} $.</p>
+
+<p>By definition, $T_{ex} \equiv \frac{h \nu}{k} / \big( \mathrm{ln} ( \frac{n_l g_u}{n_u g_l} ) \big)$, so $T_{ex} = \frac{h \nu_{10}}{k} / \big( \mathrm{ln} ( \frac{n_0 g_1}{n_1 g_0} ) \big) = \frac{h \nu_{10}}{k} / \big( \mathrm{ln} ( \frac{A21}{A10} \frac{\nu_{10}^2}{\nu_{21}^2} \frac{g_2}{g_1} / \mathrm{line \; ratio \; R21} ) \big)$.</p>
+
+<p>For neutral atomic carbon, $g_0, g_1, g_2 = 1, 3, 5$, $A_{10} = 7.880E-08, A_{21} = 2.650E-07, A_{20} = 1.810E-14$. (<a href="https://home.strw.leidenuniv.nl/~moldata/datafiles/catom.dat">Leiden Atomic and Molecular Database</a>), so $\frac{A21}{A10} \frac{\nu_{10}^2}{\nu_{21}^2} \frac{g_2}{g_1} = (2.650E-07 / 7.880E-08) * (492.160651/809.34197)**2 * (5./3.) = 2.0726$.</p>
+
+<p>So $T_{ex} = 23.6 / \big( \mathrm{ln} ( 2.0726 / \mathrm{line \; ratio \; R21} ) \big) $</p>
+
+<p>Note that this is different than all other works, which is $T_{ex} = 38.8 / \big( \mathrm{ln} ( 2.11 / \mathrm{line \; ratio \; R21} ) \big) $, which is because they have $N_{u} = \frac{8 \pi k \nu^2}{h c^3 A_{ul}} \int T_{R} \mathrm{d} v $, e.g., Jakob et al. 2007 Appendix C, but my deduction is $N_{l} = \frac{8 \pi k \nu^2}{h c^3 A_{ul}} \frac{g_l}{g_u} \int T_{R} \mathrm{d} v$ or equivalently $N_{u} = \frac{g_u}{g_l} N_{l} \exp(-h \nu / (k T_{ex})) = \frac{8 \pi k \nu^2}{h c^3 A_{ul}} \exp(-h \nu / (k T_{ex})) \int T_{R} \mathrm{d} v$.</p>
+
+<p>If without RJ approximation, my deduction is: $N_u = \frac{8 \pi \nu^2}{c^2} \frac{1}{A_{ul}} \frac{1}{( \exp(h \nu / (k T_{ex})) - 1)} \int \tau_{\nu} \mathrm{d} \nu = \frac{8 \pi \nu^3}{c^3} \frac{1}{A_{ul}} \frac{1}{( \exp(h \nu / (k T_{ex})) - 1)} \int \tau_{\nu} \mathrm{d} v$, this is consistent with Mangum &amp; Shirley 2015 Eq. 30 (note that they expanded $A_{ul}$ by their Eq. 11).</p>
+
+<p>This, when expressing as $N_u$ instead of $N_l$, becomes $N_u = \frac{8 \pi \nu^3}{c^3} \frac{1}{A_{ul}} \frac{1}{( \exp(h \nu / (k T_{ex})) - 1)} \int T_{R}/T_{ex} \mathrm{d} v$. Applying RJ approximation, $N_u \approx \frac{8 \pi \nu^3}{c^3} \frac{1}{A_{ul}} \frac{1}{h \nu / k} \int T_{R} \mathrm{d} v = \frac{8 \pi k \nu^2}{h c^3 A_{ul}} \int T_{R} \mathrm{d} v$ (when $\tau \ll 1$ and $(h \nu / (k T_{ex})) \ll 1$). So now this is consistent with all other works. 
+Under this approximation, line ratio $\int T_{R,\mathrm{[CI](^3P_2-^3P_1)}} \mathrm{d} v / \int T_{R,\mathrm{[CI](^3P_1-^3P_0)}} \mathrm{d} v \approx \frac{A21}{A10} \frac{\nu_{10}^2}{\nu_{21}^2} \frac{N_2}{N_1} $, 
+so $T_{ex} = \frac{h \nu_{21}}{k} / \big( \mathrm{ln} ( \frac{n_1 g_2}{n_2 g_1} ) \big) = \frac{h \nu_{21}}{k} / \big( \mathrm{ln} ( \frac{A21}{A10} \frac{\nu_{10}^2}{\nu_{21}^2} \frac{g_2}{g_1} / \mathrm{line \; ratio \; R21} ) \big)$.</p>
+
+<p>The formal line ratio without RJ approximation is: $\mathrm{line \; ratio \; R21} = \frac{\int T_{R,21} \mathrm{d} v}{\int T_{R,10} \mathrm{d} v} = \frac{\int T_{ex} \tau_{21} \mathrm{d} v}{\int T_{ex} \tau_{10} \mathrm{d} v} = \frac{\nu_{10}^3}{\nu_{21}^3} \frac{A21}{A10} \frac{N_2}{N_1} \frac{\exp(h \nu_{21} / (k T_{ex}))-1}{\exp(h \nu_{10} / (k T_{ex}))-1}$. 
+And by definition $T_{ex} = \frac{h \nu_{21}}{k} / \big( \mathrm{ln} ( \frac{N_1 g_2}{N_2 g_1} ) \big)$. Substitute it. So $\mathrm{line \; ratio \; R21} = \frac{\nu_{10}^3}{\nu_{21}^3} \frac{A21}{A10} \frac{g_2}{g_1} \exp(-h \nu_{21} / (k T_{ex})) \frac{\exp(h \nu_{21} / (k T_{ex}))-1}{\exp(h \nu_{10} / (k T_{ex}))-1}$, 
+or equivalently $T_{ex} = \frac{h \nu_{21}}{k} / \big( \mathrm{ln} ( \frac{\nu_{10}^3}{\nu_{21}^3} \frac{A21}{A10} \frac{g_2}{g_1} \frac{\exp(h \nu_{21} / (k T_{ex}))-1}{\exp(h \nu_{10} / (k T_{ex}))-1} / \mathrm{line \; ratio \; R21} ) \big)$.</p>
+
+<p>It seems the RJ approximation is really bad for [CI] as its level energy is not as low as CO low-J lines, $(h \nu / (k T_{ex})) \sim 1$. For example, $T_{ex} = 30$, $(h \nu_{10} / (k T_{ex})) = 23.6/30 = 0.787$, $(h \nu_{21} / (k T_{ex})) = 38.9/30 = 1.297$, 
+so $\exp(h \nu_{10} / (k T_{ex})) -1 = 1.196$ and $\exp(h \nu_{21} / (k T_{ex})) -1 = 2.657$, so $T_{ex} = \frac{h \nu_{21}}{k} / \big( \mathrm{ln} ( \frac{\nu_{10}^2}{\nu_{21}^2} \frac{A21}{A10} \frac{g_2}{g_1} \frac{\nu_{10}}{\nu_{21}} 2.222 / \mathrm{line \; ratio \; R21} ) \big) = 38.9 / \big( \mathrm{ln} ( 2.0726 * 0.6081 * 2.222 / \mathrm{line \; ratio \; R21} ) \big)  = 38.9 / \big( \mathrm{ln} ( 2.800 / \mathrm{line \; ratio \; R21} ) \big) $.</p>
+
+<h4>Calculating [CI] using CO excitation temperature</h4>
+
+<p>Under LTE, all lines have the same excitation temperature $T_{ex}$ which equals the gas kinetic temperature $T_{kin}$.<br />
+Once we obtained the excitation temperature $T_{ex}$ from CO, we can calculate the optical depth $\tau$ for optically thin lines, e.g., [CI], 13CO, etc.</p>
+
+<p>$\tau_{\mathrm{[CI](^3P_1-^3P_0)}} = T_{R,\mathrm{[CI](^3P_1-^3P_0)},max} / \big( 23.6 / (\exp(23.6/T_{ex})-1) - [23.6/(\exp(23.6/2.73)-1)] \big) = T_{R,\mathrm{[CI](^3P_1-^3P_0)},max} / \big( 23.6 / (\exp(23.6/T_{ex})-1) - 0.004156 \big) $</p>
+
+<p>$\tau_{\mathrm{[CI](^3P_2-^3P_1)}} = T_{R,\mathrm{[CI](^3P_2-^3P_1)},max} / \big( 38.9 / (\exp(38.9/T_{ex})-1) - [38.9/(\exp(38.9/2.73)-1)] \big) = T_{R,\mathrm{[CI](^3P_2-^3P_1)},max} / \big( 38.9 / (\exp(38.9/T_{ex})-1) - 0.00002521 \big) $</p>
+
+<p>(e.g., see Pineda et al. 2008 Eq. 7 which does not assume R-J approximation).</p>
 
 <h5>References</h5>
 <ul>
   <li>Dickman1978 (1978ApJS…37..407D)</li>
   <li>Pineda2008 (2008ApJ…679..481P)</li>
+  <li>Schneider2003 (2003A&amp;A…406..915S)</li>
   <li>Glover2015</li>
 </ul>
+
+<h4>When to assume Boltzmann distribution for the level population?</h4>
+
+<p>One can assume Boltzmann distribution for the level population, when the level is thermalized (i.e., LTE), e.g., $n_{\mathrm{H_2}} \gg n_{\mathrm{crit}}$, where $n_{\mathrm{crit, \mathrm{H_2}, j \to i}} = \Sigma_{i&lt;j} A_{j,i} / \Sigma_{i \neq j} \gamma_{j,i}$, where $A_{j,i}$ is Einstein A coefficient (in units of $\mathrm{s}^{-1}$) and $\gamma_{j,i}$ is the collisional excitation rate coefficient (collisional cross section) (in units of $\mathrm{cm}^{3} \; \mathrm{s}^{-1}$), for transition $j \to i$. 
+$A_{21}$ depends on energy level, and $\gamma_{21}$ depends on both energy level and kinetic temperature. These are measured by laborotaries.</p>
+
+<p>The Boltzmann distribution means $ \displaystyle \frac{n_{j}}{n_{i}} = \frac{g_{j}}{g_{i}} e^{-\frac{h \nu_{j \to i}}{k_{\mathrm{B}} T_{\mathrm{ex}, j \to i} }} $, where $n$ now is the occupation number at that energy level (instead of the gas volume density n_{\mathrm{H_2}}), and $g$ is the statistical weight.</p>
+
+<h4>When to assume statistical equilibrium?</h4>
+
+<p>We always assume statistical equilibrium, so that the level population is stationary, i.e., 
+$ \displaystyle \frac{\mathrm{d}\,n}{\mathrm{d}\,t} = \sum\limits_{j &lt; i}\,{n_{i} (A_{i,j})} + \sum\limits_{j \ne i}\,{n_{i} (B_{i,j} \cdot J + C_{i,j})} - \sum\limits_{j &gt; i}\,{n_{j} (A_{j,i})} - \sum\limits_{j \ne i}\,{n_{j} (B_{j,i} \cdot J + C_{j,i})} = 0 $, where $J$ is the local radiation field intensity.</p>
+
+<p>Or including spontaneous de-excitation, radiative (de-)excitation and collisional (de-)excitation for a two level system:
+$n_l \, n \, \gamma_{lu} + n_l \, B_{lu} \, J_{\nu} = n_u \, n \, \gamma_{ul} + n_u \, A_{ul} + n_u \, B_{ul} \, J_{\nu}$ (Tielens 2005 Eq. 2.39)</p>
+
+<p>Einstein A B coefficients naturally have the following two equations: $ \displaystyle g_{i} B_{i,j} = g_{j} B_{j,i} $ and $ \displaystyle A_{j,i} = \frac{8 \pi h \nu_{j,i}^3}{c^2} B_{j,i} $.</p>
+
+<h4>When to assume detailed balance?</h4>
+
+<p>We always assume detailed balance for collisional (de-)excitation, so that 
+$n_{i} C_{i,j} = n_{j} C_{j,i}$.</p>
+
+<h4>When to assume Rayleigh-Jeans approximation?</h4>
+
+<p>We always assume Rayleigh-Jeans approximation for (sub-)mm/radio line radiation calculation. 
+$ \displaystyle B_{\nu} (T_{R}) \approx \frac{2 \nu^2 k_{\mathrm{B}} T_{R} }{c^2} $. 
+$T_{R}$ indicates the Rayleigh-Jeans temperature.</p>
+
+<h4>Temperatures?</h4>
+
+<p>The main beam temperature $T_{\mathrm{mb}}$ or $T_{R}$ is the observed flux after main beam efficiency correction and expressed in temperature with $ S_{\nu} = \frac{2 \nu^2 k_{\mathrm{B}} T_{R} }{c^2} $.</p>
+
+<p>The antenna temperature $T_{A}^{*}$ is the directly observed flux without main beam efficiency correction and expressed in temperature with $ S_{\nu} = \frac{2 \nu^2 k_{\mathrm{B}} T_{A}^{*}}{c^2} $.</p>
+
+<p>The Rayleigh-Jeans temperature $T_{RJ}$ is defined by the radiation transfer source function, $ S_{\nu} = \frac{2 \nu^2 k_{\mathrm{B}} T_{RJ} }{c^2} $.</p>
+
+<p>The excitation temperature $T_{\mathrm{ex}}$ is defined between two levels such that the Boltzman factor, at the excitation temperature, times the ratio of the statistical weights yields the ratio of the populations (see <a href="https://www.astro.umd.edu/rareas/lma/lgm/mol2.html">here</a>). $T_{\mathrm{ex}} \equiv \frac{E_{ul}}{k} / \big( \mathrm{ln}(\frac{n_l g_u}{n_u g_l}) \big) $ (Tielens 2005 Eq. 2.34).</p>
+
+<p>The kinetic temperature $T_{\mathrm{kin}}$ is the gas kinetic motion’s temperature, does not depend on levels. When $T_{\mathrm{ex}, j \to i} = T_{\mathrm{kin}}$, we say the level transition $j \to i$ is thermalized.   When $T_{\mathrm{ex, j \to i}} &gt; T_{\mathrm{kin}}$, which is very rare, we say the level transition $j \to i$ is super-thermalized. Normally $T_{\mathrm{ex}, j \to i} &lt; T_{\mathrm{kin}}$ when the gas is not in thermaldynamo equilibrium (TE).</p>
+
+<p>Critical density is defined by Einstein A B coefficients.</p>
+
+<h4>How is radiation transfered along the line of sight?</h4>
+
+<p>$ \displaystyle \frac{\mathrm{d}\,I_{\nu}}{\mathrm{d}\,s} = - \alpha_{\nu} I_{\nu} + j_{\nu}$, meaning that the change of radiation intensity at a certain position $s$ on the line of sight depends on the absorbed energy plus emitted energy. $\alpha_{\nu}$ is the absorption coefficient in units of $\mathrm{cm}^{-1}$.</p>
+
+<p>Introducing optical depth $\tau_{\nu} (s) \equiv \int_{s_0}^{s} \alpha_{\nu} (s’) \mathrm{d}\,s’$, i.e., $\mathrm{d}\,\tau_{\nu} = \alpha_{\nu} \, \mathrm{d}\,s$, and source function $S_{\nu} \equiv \frac{j_{\nu}}{\alpha_{\nu}} $ , we have</p>
+
+<p>$ \displaystyle \frac{\mathrm{d}\,I_{\nu}}{\mathrm{d}\,\tau} = -I_{\nu} + S_{\nu} $</p>
+
+<p>Solve it, we can find a most reasonable solution:</p>
+
+<p>$ \displaystyle I_{\nu} = S_{\nu} - (S_{\nu} - I_{\nu, 0}) \times e^{-\tau_{\nu}} $</p>
+
+<p>i.e.,</p>
+
+<p>$ \displaystyle I_{\nu} = S_{\nu} \times (1-e^{-\tau_{\nu}}) + I_{\nu, 0} \times e^{-\tau_{\nu}} $</p>
+
+<p>Note that $S_{\nu}$ can be expressed as $S_{\nu} \equiv \frac{2 h \nu^3}{c^2} \frac{1}{\frac{n_1 g_2}{n_2 g_1}-1}$ (see <a href="http://www.strw.leidenuniv.nl/~moldata/radex_manual.pdf">here Sect. 2.3</a>).</p>
+
+<p>Now we do some assumptions:</p>
+
+<p>(1) LTE, so that $\frac{n_1 g_2}{n_2 g_1} = e^{-\frac{h \nu}{k_{\mathrm{B}} T_{\mathrm{ex}, \nu}}}$, and thus $S_{\nu} = B_{\nu} (T_{\mathrm{ex}})$;</p>
+
+<p>(2) the background ambient radiation field $I_{\nu, 0}$ is purely cosmic microwave backgroud ($B_{\nu} (T_{\mathrm{CMB}})$);</p>
+
+<p>Then we have</p>
+
+<p>$ \displaystyle I_{\nu} = B_{\nu} (T_{\mathrm{ex}, \nu}) \times (1-e^{-\tau_{\nu}}) + B_{\nu} (T_{\mathrm{CMB}}) \times e^{-\tau_{\nu}} $</p>
+
+<p>Then we assume the Rayleigh-Jeans approximation,</p>
+
+<p>$ \displaystyle T_{\mathrm{mb}, \nu} = T_{\mathrm{ex}, \nu} \times (1-e^{-\tau_{\nu}}) + T_{\mathrm{CMB}} \times e^{-\tau_{\nu}} $.</p>
+
+<h4>What if non-LTE?</h4>
+
+<p>In non-LTE, we can introduce a escape probability so that in the statistical equilibrium equation $J_{\nu} \equiv (1-\beta(\tau_{\nu})) S_{\nu}$, where $\beta(\tau)$ is the escape probability to make local radiation intensity deviate from the source function and can have forms like $\beta(\tau)\equiv(1-e^{-\tau})/\tau$ or $\beta(\tau)\equiv(1-e^{-3\tau})/(3\tau)$, etc.</p>
+
+<p>Then we need to solve the statistical equilibrium equations for all levels, then solve source function and $\beta$ and $\tau$ and $T_{\mathrm{ex}}$ for all transitions.</p>
 
 
     </div>

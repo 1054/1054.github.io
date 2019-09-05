@@ -169,6 +169,18 @@
     width: 100%;
 }
 
+.div-for-table-maximum-width table {
+    float: left;
+    text-align: center;
+    margin: 2em 3em 1em 3em; /* top right bottom left */
+    border: 3px solid lightblue;
+    border-radius: 5px;
+}
+
+.div-for-table-maximum-width table td {
+    white-space: nowrap;
+}
+
 .div-for-figure-half-width {
     width: auto;
     float: left;

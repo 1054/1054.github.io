@@ -1,0 +1,209 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>宇宙学</title>
+    <link rel="stylesheet" href="/stylesheet.css">
+    <link rel="stylesheet" href="/hover.css">
+    
+    <script type="text/x-mathjax-config">
+      /*<![CDATA[*/MathJax.Hub.Config({
+      tex2jax: {
+          inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+          displayMath: [ ["$$","$$"], ["\\[","\\]"] ],
+          displayAlign: "left", 
+          processEscapes: true
+        }
+      });
+      /*!]]>*/
+    </script>
+    <!-- 
+    <script type="text/javascript" charset="utf-8" src="/jas/mathjax/MathJax.js?config=TeX-AMS_CHTML"></script>
+    -->
+    <!--"https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML"-->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+    
+    <!--
+    <script src="/jas/jquery-1.10.2.js"></script>
+    -->
+  </head>
+  <body>
+    <!-- begin of header bar -->
+    <div id="head-navigator" class="head-navigator">
+      <ul>
+        <li><a href="/">Homepage</a></li>
+        <li><a href="/Research">Research</a></li>
+        <li><a href="/Wiki">Wiki</a></li> <!-- <li><a href="https://wiki-1054.rhcloud.com">Wiki</a></li> -->
+        <li><a href="/CV">CV</a></li>
+        <li><a href="/Contact">Contact</a></li>
+      </ul>
+    </div>
+    
+    <div id="head-banner" class="head-banner-with-background">
+      <h1>宇宙学</h1>
+      
+    </div>
+    
+    <!-- end of header bar --> 
+    
+    
+    
+    <!-- 
+    <div id="main">
+    -->
+    <div id="page" class="page">
+      
+<div class="div-align-left" style="line-height:2em;">
+
+  <ul>
+    <li>张量 (tensor)
+      <ul>
+        <li>什么是张量? 如 A. Zee 书中所说: A tensor is something that transforms like a tensor. 一个量, 在不同的参考系下按照某种特定的法则进行变换, 就是张量。</li>
+        <li>引用陈维桓先生的《微分流形初步》一书中的一段话: 张量的概念是 G. Ricci 在19世纪末提出的. G. Ricci 研究张量的目的是为几何性质和物理规律的表达寻求一种在坐标变换下不变的形式. 他所考虑的张量是如同向量的分量那样的数组, 要求它们在坐标变换下服从某种线性变换的规律. 近代的理论已经把张量叙述成向量空间及其对偶空间上的多重线性函数, 但是用分量表示张量仍有它的重要性, 尤其是涉及张量的计算时更是如此.</li>
+        <li>0阶张量就是标量，它不随坐标的变换有任何的变化。</li>
+        <li>1阶张量就是矢量，它也不随坐标的变化。</li>
+        <li>但是！不是所有的 $3 \times 3$ 矩阵代数式都是张量。材料力学中有一个最经典的例子，工程应变并不是张量。</li>
+        <li>张量作用在任意矢量上的运算可以用矩阵写作：$ \displaystyle T(u,v) = (u_x \ u_y \ u_z)\left( \begin{array}{ccc} T_{xx} \ T_{xy} \ T_{xz} \\ T_{yx} \ T_{yy} \ T_{yz} \\ T_{zx} \ T_{zy} \ T_{zz} \end{array} \right) \left( \begin{array}{c} v_x \\ v_y \\ v_z \end{array} \right) $</li>
+        <li>来源：https://www.zhihu.com/question/20695804/answer/43265860</li>
+      </ul>
+    </li>
+    <li>度量张量/度规张量/度规 (metric tensor) $ g_{\mu\nu} \equiv ds^{2} \equiv \sum_{\mu\nu} g_{\mu\nu} dx^{\mu} dx^{\nu} $
+      <ul>
+        <li>二维欧几里德直角坐标系的度规 $ \displaystyle (g_{ij}) = {\begin{bmatrix}1&amp;0\\0&amp;1\end{bmatrix}} $</li>
+        <li>二维欧几里德极坐标系 $ \displaystyle (x^{1},x^{2})=(r,\theta) $ 的度规 $ \displaystyle (g_{ij}) = \begin{bmatrix} 1 &amp; 0 \\ 0 &amp; r^2\end{bmatrix} $</li>
+        <li>三维欧几里德球坐标系 $ \displaystyle (x^{1},x^{2},x^{3})=(r,\phi,\theta) $ 的度规 $ \displaystyle (g_{ij}) = \begin{bmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; r^2 &amp; 0 \\ 0 &amp; 0 &amp; (r \sin \phi)^2\end{bmatrix} $</li>
+        <li>平面闵可夫斯基空间 $ \displaystyle (x^{0},x^{1},x^{2},x^{3})=(ct,x,y,z) $ 的度规 $ \displaystyle (g_{\mu\nu}) = (\eta_{\mu\nu}) \equiv {\begin{bmatrix}-1&amp;0&amp;0&amp;0\\0&amp;1&amp;0&amp;0\\0&amp;0&amp;1&amp;0\\0&amp;0&amp;0&amp;1\end{bmatrix}} $</li>
+      </ul>
+    </li>
+    <li>里奇张量/里奇曲率张量 (Ricci curvature tensor)
+      <ul>
+        <li>用以描述<a href="https://zh.wikipedia.org/wiki/黎曼流形">黎曼流形 (Riemannian manifold)</a> 的度规所决定的体积之偏离欧几里得空间的程度</li>
+        <li>$ \displaystyle R_{\mu\nu} $</li>
+        <li>其迹 (主对角线元素之和 sum of all elements on the main diagonal) $ \displaystyle R $ 为里奇标量 (scalar curvature or Ricci scalar)</li>
+      </ul>
+    </li>
+    <li>能动张量 (stress-energy tensor)
+      <ul>
+        <li>描述了物质能量的分布情况，与物质密度、温度、压力有关</li>
+        <li>$4 \times 4$</li>
+        <li>连续性 (divergenceless): $ \displaystyle T^{\mu\nu}{}_{;\nu} \equiv \nabla_{\mu} T^{\mu\nu} = 0 $。若忽略引力，则 $ \displaystyle T^{\mu\nu}{}_{,\nu} \equiv \partial_{\nu} T^{\mu \nu} = 0 $。其积分形式为 $ \displaystyle \int_{\partial N} T^{\mu\nu} \mathrm{d}^3 s_{\nu} = 0 $。</li>
+        <li>对称性</li>
+        <li>1+2+3+4=10 components</li>
+      </ul>
+    </li>
+    <li>爱因斯坦场张量
+      <ul>
+        <li>定义为 $ \displaystyle G_{\mu\nu} = R_{\mu\nu} - \frac{1}{2} g_{\mu\nu} R $</li>
+        <li>$4 \times 4$</li>
+        <li>连续性 (divergenceless): $ \displaystyle \nabla_{\mu} G^{\mu\nu} = 0 $</li>
+        <li>对称性</li>
+        <li>1+2+3+4=10 components</li>
+      </ul>
+    </li>
+    <li>爱因斯坦场方程
+      <ul>
+        <li>$ \displaystyle G_{\mu\nu} = \frac{8 \pi G}{c^{4}} T_{\mu\nu} $</li>
+        <li>或 $ \displaystyle G_{\mu\nu} + \Lambda g_{\mu\nu} = \frac{8 \pi G}{c^{4}} T_{\mu\nu} $，当考虑所谓的宇宙学常数时。</li>
+        <li>如果考虑<a href="https://zh.wikipedia.org/wiki/幾何化單位制#相對論中的幾何化單位制">相对论中的几何化单位制</a>，则场方程简为 $\displaystyle G_{\mu\nu}=2T_{\mu\nu}$</li>
+        <li>vacuum energy density: $ {\displaystyle \rho _{\mathrm {vac} }={\frac {\Lambda c^{2}}{8\pi G}}} $</li>
+      </ul>
+    </li>
+    <li>爱因斯坦场方程的解
+      <ul>
+        <li>No unique or simple definition (Kramer et al. 1980; Stephani et al. 2003). – http://www.utdallas.edu/~mishak/ExactSolutionsInAstrophysics_Ishak_Final.pdf</li>
+        <li>爱因斯坦场方程给出了 10 个方程式</li>
+        <li>能动张量的连续性给出了 4 个方程式</li>
+        <li>因此还需要能态方程或特殊的度规</li>
+        <li>Slowly rotating stars and planets: The Schwarzschild solution</li>
+        <li>Static black holes: The Schwarzschild solution</li>
+        <li>Star interiors: e.g. Tolman, Buchdahl, Heintzmann solutions</li>
+        <li>Neutron stars: Tolman VII and Durgapal solutions</li>
+        <li>Rotating black holes: The Kerr-(Newman) solution</li>
+        <li>Gravitational waves: gravitational plane wave exact solution</li>
+        <li>Standard model of cosmology: The Friedmann-LemaitreRobertson-Walker solution
+          <ul>
+            <li>The everywhere-isotropic Friedmann-Lemaître-Robertson-Walker (FLRW) standard model of cosmology: $ \displaystyle ds^2 = -c^2 dt^2 + a^2(t) \left[ \frac{dr^2}{1-kr^2} + r^2 (d\theta^2 + \sin^2 \theta d\phi^2) \right] $</li>
+            <li>The perfect fluid EoS: $ \displaystyle T^{\mu\nu} = (\rho + p) u^{\mu} u^{\nu} + p g^{\mu\nu} $</li>
+          </ul>
+        </li>
+        <li>Inhomogeneous Cosmological models: e.g. Lemaitre-Tolman-Bondi solutions, Szekeres solutions, Oleson solutions</li>
+      </ul>
+    </li>
+  </ul>
+
+</div>
+
+
+    </div>
+    
+    
+    
+    <!-- begin highlight selected column -->
+    <!-- 
+    <script type="text/javascript">
+      //var mytab; var mycol;
+      function selectTabColumn() {
+        //alert(mytab.rows);
+        var mytab = $(this).parent().parent();
+        var myrow = $(this).parent().index();
+        var mycol = $(this).index();
+        alert(mytab+"\n"+myrow+"\n"+mycol);
+        for (var i = 0; i < mytab.rows.length; i++) {
+          alert(mytab.rows[i].cells.length);
+          alert(mycol);
+          var myclassname = mytab.rows[i].cells[mycol].className;
+          alert(myclassname);
+          className.replace("selected", "");
+          className += "selected";
+          mytab.rows[i].cells[mycol].className = myclassname;
+          //mytab.rows[i].cells[mycol].find('td').toggleClass("highlighted");
+          //mytab.rows[i].cells[mycol].find('td').toggleClass('selected');
+          //mytabcells.eq(i).addClass("selected");
+          //var mycells = mytab.find("tr").eq(i).find("td");
+          //for (var j = 0; j < mycells.length; j++) {
+          //  //mytab.rows.eq(i).cells.eq(j).addClass("selected");
+          //  mycells.eq(j).addClass("selected");
+          //}
+        }
+      }
+      // set onclick action for all table column header cells
+      var mypage = document.getElementById("page");
+      if (mypage != null) {
+        // alert(mypage);
+        var mytabs = mypage.getElementsByTagName("table");
+          if (mytabs != null) {
+            for (var i = 0; i < mytabs.length; i++) {
+              var mytabheads = mytabs[i].getElementsByTagName("th");
+              if (mytabheads != null) {
+                for (var j = 0; j < mytabheads.length; j++) {
+                  // alert(mytabheads[j].innerHTML);
+                  // mytabheads[j].addEventListener("click", function() {selectTabColumn();}, false);
+                  mytabheads[j].addEventListener("click", function() {
+                    // onclick function - select all cells
+                    var myrow = $(this).parent().index()+1;
+                    var mycol = $(this).index()+1;
+                    var mycols = $(this).closest("table").find('td:nth-child('+mycol+')');
+                    mycols.addClass("selected");
+                    var selection = window.getSelection();
+                    selection.removeAllRanges();
+                    for (var k = 0; k < mycols.length; k++) {
+                      var range = document.createRange();
+                      range.selectNode(mycols[k]); // https://stackoverflow.com/questions/20575927/javascript-highlight-html-table-cell-onclick-and-copy-value-with-ctrl-c
+                      selection.addRange(range);
+                    }
+                    //alert("Row: "+myrow+"\n"+"Col: "+mycol+"\n"+"Sel: "+mycols.length);
+                    // OR
+                    // onclick function - manually highlight all cells then copy to clipboard
+                  }, false);
+                }
+              }
+            }
+          }
+      }
+    </script>
+    -->
+    <!-- end highlight selected column -->
+    
+    
+  </body>
+</html>
